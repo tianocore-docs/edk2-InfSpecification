@@ -328,7 +328,7 @@ Macro statements that are referenced before they are defined will have a value
 of zero. A macro defined in a section that is common to all architectures is
 also value for sections that have architectural modifiers.
 
-It is recommended that if the tools encounter a macroval, as in $(MACRO), that
+It is recommended that if the tools encounter a macroval, as in `$(MACRO)`, that
 is not defined, the build tools must break.
 
 #### Prototype

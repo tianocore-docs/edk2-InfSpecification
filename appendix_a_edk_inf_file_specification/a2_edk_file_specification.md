@@ -410,8 +410,8 @@ uses both "source" and "sources" in the section header.
 
 There can be multiple sources sections, depending on the target processor.
 Example sources sections are listed below. The parsing utility creates a
-directory path for each file ($(DEST_DIR)...\MyFile.c), and looks up the
-makefile template for the COMPONENT_TYPE (EDK) to emit.
+directory path for each file (`$(DEST_DIR)...\MyFile.c`), and looks up the
+makefile template for the `COMPONENT_TYPE` (EDK) to emit.
 
 It is not permissible to mix EDK and EDK II style files within a module.
 

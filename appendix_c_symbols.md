@@ -32,8 +32,8 @@
 # Appendix C Symbols
 
 One of the core concepts of this utility is the notion of symbols. Use of
-symbols follows the makefile convention of enclosing within $(), for example
-$(EDK_SOURCE). As the utility processes files during execution, it will often
+symbols follows the makefile convention of enclosing within `$()`, for example
+`$(EDK_SOURCE)`. As the utility processes files during execution, it will often
 perform parsing of variable assignments. These variables can then be referenced
 in other sections of the DSC file. Variable assignments will be saved internally
 in either a local or global symbol table. The local symbol table is purged

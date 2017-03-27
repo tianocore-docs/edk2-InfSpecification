@@ -48,7 +48,7 @@ other architecture type; doing so will result in a build break.
 There can be multiple `[Binaries]` sections, depending on the target processor.
 Example binaries sections are listed below. Each binary file's path is relative
 to the location of the component's INF file. The parsing utility creates a
-directory path for each file (_$(DEST_DIR)/Path/OUTPUT_), and copies each file
+directory path for each file (`$(DEST_DIR)/Path/OUTPUT`), and copies each file
 (or a processed version of a Unicode User Interface or Version section) to the
 `OUTPUT` directory. No makefile is produced, as binary files are only used by
 the third phase of a build, creating FV, FD or similar binary files.

@@ -33,7 +33,7 @@
 
 The `[Binaries]` section is used to specify the binary files that are
 distributed as part of a Binary Module. The binary files listed are not used by
-the $(MAKE) portion of a platform build, but are used by other tools to
+the `$(MAKE)` portion of a platform build, but are used by other tools to
 generate an image suitable for either an Application, FD or FV. A pipe
 character "|" is used to separate the fields. If the file is in a
 sub-directory, then the relative (to the INF file) path must be included as

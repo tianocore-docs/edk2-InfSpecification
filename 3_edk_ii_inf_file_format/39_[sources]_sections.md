@@ -43,15 +43,15 @@ the INF file or in sub-directories of the directory containing the INF file.
 The '`common`' architecture modifier in a section tag must not be combined with
 other architecture type; doing so will result in a build break.
 
-**All paths are relative to the directory containing the INF file. If the
+All paths are relative to the directory containing the INF file. If the
 filename is listed as myfile.c, the file must be located in the same directory
-as the INF file. Absolute paths in the filename are prohibited.**
+as the INF file. Absolute paths in the filename are prohibited.
 
-**There can be multiple sources sections, depending on the target processor.
+There can be multiple sources sections, depending on the target processor.
 Example sources sections are listed below. The parsing utility creates a
-directory path for each file ($(DEST_DIR)...\MyFile.c), and looks up the
-makefile template for the COMPONENT_TYPE (EDK) or MODULE_TYPE (EDK II) to
-emit.**
+directory path for each file (`$(DEST_DIR)...\MyFile.c`), and looks up the
+makefile template for the `COMPONENT_TYPE` (EDK) or `MODULE_TYPE` (EDK II) to
+emit.
 
 It is not permissible to mix EDK and EDK II style files within a module.
 

@@ -273,7 +273,7 @@ directory/filename pair on to a single line.:
 
 Using the macro, for example, in a `[Packages]` section, looks like:
 
-$(IFMP)/IntelFrameworkModulePackage.dec
+`$(IFMP)/IntelFrameworkModulePackage.dec`
 
 Macros are evaluated where they are used in statements, not where they are
 defined. It is recommended that tools break the build and report an error if an
