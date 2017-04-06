@@ -56,6 +56,8 @@ Protocol is used in the C code.
 
 A binary INF file must not contain any `FeatureFlagExpression` content.
 
+#### Prototype
+
 ```c
 <Protocols>          ::= "[Protocols" [<com_attribs>] "]" <EOL>
                          <ProtoStatments>*
