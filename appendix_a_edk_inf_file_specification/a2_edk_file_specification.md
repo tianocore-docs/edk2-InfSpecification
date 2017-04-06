@@ -45,6 +45,8 @@ file.
 
 Component EDK INF description
 
+#### Prototype
+
 ```c
 <EDK_INF> ::= [<Header>]
               <Defines>
@@ -82,6 +84,8 @@ This information a developer creating a new EDK component or library
 information (INF) file.
 
 This is an optional section.
+
+#### Prototype
 
 ```c
 <Header>     ::= ["#"] "/*++" <EOL>
@@ -162,6 +166,8 @@ variables in other sections do not override previous assignments.
 Platform integrators that will be using EDK components that require a static
 FlashMap.h (and/or FlashMap.inc) must code them by hand and maintain the state
 of the static FlashMap files with the EDK II DSC and FDF files.
+
+#### Prototype
 
 ```c
 <Defines>      ::= "[defines" [<attribs>] "]" <EOL> <expression>+
@@ -254,6 +260,8 @@ This section also allows for specifying individual header files that will be
 added to the `$(INC)` macro using the `/FI` (Microsoft) or `-include` (GCC)
 switch. This is an optional section.
 
+#### Prototype
+
 ```c
 <Includes>   ::= "[include" ["s"] [<Attrs>] ']" <EOL>
                  <PATH>+
@@ -301,6 +309,8 @@ The standard Macro Definitions are not permitted in this section.
 
 This is an optional section.
 
+#### Prototype
+
 ```c
 <Libraries> ::= "[libraries" [<attrs>] ']" <EOL> <LibName>+
 <attrs>     ::= "." <archs> ["." <platform>]
@@ -339,6 +349,8 @@ Microsoft tool chain setup scripts, therefore no `<CFlags>` are printed, and
 the line in the Example is the most common usage.
 
 The standard Macro Definitions are not permitted in this section.
+
+#### Prototype
 
 ```c
 <Nmake>      ::= "[nmake" [<attrs>] ']" <EOL>
@@ -417,6 +429,8 @@ It is not permissible to mix EDK and EDK II style files within a module.
 
 The macro, TABLE_NAME may be used in existing EDK INF files that point to ACPI
 tables, this value wil be ignored by EDK II build tools.
+
+#### Prototype
 
 ```c
 <sources>         ::= "[source" ["s"] [<attrs>] "]" <EOL>
