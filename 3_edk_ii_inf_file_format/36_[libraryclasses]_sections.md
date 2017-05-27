@@ -37,8 +37,7 @@ These are optional sections.
 
 Defines the EDK II `[LibraryClasses]` section content. The Library Class
 entries are single lines with one or two fields, separated by the pipe "|"
-character. The optional `MODULE_TYPE` refers to the supported Module Type, and
-may be a comma separated list of supported module types.
+character.
 
 The EDK II build system will provide an option to generate an "As Built" INF
 that can be used to distribution binary modules. Since a binary distribution
@@ -65,13 +64,7 @@ in the entries is prohibited.
                          [<Statements>]
 <com_attrs>          ::= {".common"} {<attrs>}
 <attrs>              ::= <Archs> ["," <TS> "LibraryClasses" <attrs>]*
-<Archs>              ::= "." <arch> [<MODULE_TYPE>]
-<MODULE_TYPE>        ::= "." <ModuleType> [<FS> <ModuleType>]*
-<ModuleType>         ::= {"BASE"} {"SEC"} {"PEI_CORE"} {"PEIM"}
-                         {"DXE_CORE"} {"DXE_DRIVER"} {"SMM_CORE"}
-                         {"DXE_SMM_DRIVER"} {"DXE_RUNTIME_DRIVER"}
-                         {"DXE_SAL_DRIVER"} {"UEFI_DRIVER"}
-                         {"UEFI_APPLICATION"} {"USER_DEFINED"}
+<Archs>              ::= "." <arch>
 <Statements>         ::= {<SourceContent>*} {<AsBuiltInfo>}
 <SourceContent>      ::= <TS> {<SourceStmts>} {<MacroDefinition>}
 <SourceStmts>        ::= [<RecInstanceCmt> <Filename> <EOL>] <TS> <Keyword>
