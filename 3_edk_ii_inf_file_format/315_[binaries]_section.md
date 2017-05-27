@@ -110,7 +110,7 @@ included in any one `[Binaries]` section.
 <Edk2FileType>       ::= {"ACPI"} {"ASL"} {"PE32"} {"PIC"} {"FV"}
                          {"PEI_DEPEX"} {"DXE_DEPEX"} {"SMM_DEPEX"}
                          {"TE"} {"BIN"} {"RAW"} {"COMPAT16"}
-                         {"DISPOSABLE"}
+                         {"DISPOSABLE"} {"LIB"}
 ```
 
 #### Parameters

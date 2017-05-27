@@ -74,7 +74,7 @@ The formats for entries in this section are:
 ```
 FileType|Relative/path/and/filename.ext|DEBUG|GCC|UNIXGCC|TRUE
 FileType|Filename.ext|*|GCC
-FIleType|Relative/path/and/filename.ext|RELEASE
+FileType|Relative/path/and/filename.ext|RELEASE
 FileType|Filename.ext|RELEASE
 FileType|Filename.ext
 ```
@@ -169,6 +169,11 @@ This binary is an `EFI_SECTION_COMPATIBILTY16 leaf` section.
 **_FV_**
 
 This binary is an `EFI_SECTION_FIRMWARE_VOLUME_IMAGE` leaf section.
+
+**_LIB_**
+
+This binary is a pre-built library instance that provides the library class
+defined in the `LIBRARY_CLASS` statement in the `[Defines]` section.
 
 **********
 **Note:** The section names listed above refer to leaf section type values
