@@ -106,9 +106,10 @@ use for the PCD is optional.
 
 Values of PCDs defined in this file override the default values specified in
 the EDK II package declaration (DEC) file. The platform integrator can specify
-values in the DSC and FDF files that will override any settings in this file.
-If a default value is not specified, the build system will use 1) values from
-the FDF file, 2) values from the DSC file or 3) values from the DEC file.
+values in the DSC and FDF files or on the build command line to override any
+settings in this file. If a default value is not specified, the build system
+uses 1) values from the command line, 2) values from the FDF file, 3) values
+from the DSC file or 4) values from the DEC file.
 
 Expressions, or Feature Flag Expressions, may be used on PCD entry lines.
 
