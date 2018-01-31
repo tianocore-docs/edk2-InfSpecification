@@ -126,30 +126,37 @@ content.
 <ValueOffsetPcd>      ::= [<NUsageBlock>]
                           <TS> <PcdName> <FS> <ValOffUse>
 <ValOffUse>           ::= <AsBuiltValue> <Offset> <TailCmt>
-<Offset>              ::= <FS> <NumValUint32>
+<Offset>              ::= <FS> {<LongNum>} {<UINT32>}
 <AsBuiltByteArray>    ::= "{" <NList> "}"
 <AsBuiltValue>        ::= if (pcddatumtype == "BOOLEAN"):
-                          {"0x00"} {"0x01"} elif (pcddatumtype == "UINT8"):
-                          <UINT8z> elif (pcddatumtype == "UINT16"):
-                          <UINT16z> elif (pcddatumtype == "UINT32"): <UINT32z>
+                            {"0x00"} {"0x01"} 
+                          elif (pcddatumtype == "UINT8"):
+                            <UINT8z> 
+                          elif (pcddatumtype == "UINT16"):
+                            <UINT16z>
+                          elif (pcddatumtype == "UINT32"): 
+                            <UINT32z>
                           elif (pcddatumtype == "UINT64"):
-                          <UINT64z> else:
-                          <AsBuiltByteArray>
+                            <UINT64z> 
+                          else:
+                            <AsBuiltByteArray>
 <PcdEntries>          ::= [<NUsageBlock>]
                           <TS> <PcdName> [<PField1>] <TailCmt>
 <PField1>             ::= <FS> [<Value>] [<FFE>]
 <Value>               ::= if (pcddatumtype == "BOOLEAN"):
-                          <Boolean> elif (pcddatumtype == "UINT8"):
-                          <NumValUint8> elif (pcddatumtype == "UINT16"):
-                          <NumValUint16> elif (pcddatumtype == "UINT32"):
-                          <NumValUint32> elif (pcddatumtype == "UINT64"):
-                          <NumValUint64> else:
-                          <StringVal>
-<StringVal>           ::= {<StringType>} {<CArray>}
-<StringType>          ::= {<UnicodeString>} {<CString>}
+                            <Boolean>
+                          elif (pcddatumtype == "UINT8"):
+                            {<NumValUint8>} {<Expression>}
+                          elif (pcddatumtype == "UINT16"):
+                            {<NumValUint16>} {<Expression>}
+                          elif (pcddatumtype == "UINT32"):
+                            {<NumValUint32>} {<Expression>}
+                          elif (pcddatumtype == "UINT64"):
+                            {<NumValUint64>} {<Expression>}
+                          else:
+                            {<StringVal>} {<Expression>}
 <FFE>                 ::= <FS> <FeatureFlagExpress>
-                          <1
-UsageBlock>           ::= <CommentBlock>
+<1UsageBlock>         ::= <CommentBlock>
 <NUsageBlock>         ::= <CommentBlock>+
 <FeatureFlagExpress>  ::= <Boolean>
 <CommentBlock>        ::= <TS> ["##" <TS> <Usage>] <TS> <CmtOrEol>

@@ -113,11 +113,12 @@ The following are common definitions used by multiple section types.
 <Identifier>         ::= <NonDigit> <Chars>*
 <CName>              ::= <Identifier> # A valid C variable name.
 <AsciiChars>         ::= (0x21 - 0x7E)
-<CChars>             ::= [{0x21} {(0x23 - 0x5B)} {(0x5D - 0x7E)}
-                         {<EscapeSequence>}]*
+<CChars>             ::= [{0x21} {(0x23 - 0x26)} {(0x28 - 0x5B)}
+                         {(0x5D - 0x7E)} {<EscapeSequence>}]*
 <DblQuote>           ::= 0x22
+<SglQuote>           ::= 0x27
 <EscapeSequence>     ::= "\" {"n"} {"t"} {"f"} {"r"} {"b"} {"0"} {"\"}
-                         {<DblQuote>}
+                         {<DblQuote>} {<SglQuote>}
 <TabSpace>           ::= {<Tab>} {<Space>}
 <TS>                 ::= <TabSpace>*
 <MTS>                ::= <TabSpace>+
@@ -139,11 +140,12 @@ The following are common definitions used by multiple section types.
 <CFlags>             ::= <AsciiString>
 <PrintChars>         ::= {<TS>} {<CChars>}
 <QuotedString>       ::= <DblQuote> <PrintChars>* <DblQuote>
-<CString>            ::= ["L"] <QuotedString>
+<SglQuotedString>    ::= <SglQuote> <PrintChars>* <SglQuote>
+<CString>            ::= {<QuotedString>} {<SglQuotedString>}
 <NormalizedString>   ::= <DblQuote> [{<Word>} {<Space>}]+ <DblQuote>
 <GlobalComment>      ::= <WS> "#" [<AsciiString>] <EOL>+
 <Comment>            ::= "#" <AsciiString> <EOL>+
-<UnicodeString>      ::= "L" <QuotedString>
+<UnicodeString>      ::= "L" {<QuotedString>} {<SglQuotedString>}
 <HexDigit>           ::= (a-fA-F0-9)
 <HexByte>            ::= {"0x"} {"0X"} <HexDigit> <HexDigit>
 <HexNumber>          ::= {"0x"} {"0X"} <HexDigit>*
@@ -183,10 +185,10 @@ The following are common definitions used by multiple section types.
 <NumNz>               ::= (1-18446744073709551615)
 <GZ>                  ::= {<NumNz>} {<HexNz>}
 <TRUE>                ::= {"TRUE"} {"true"} {"True"} {"0x1"} {"0x01"} {"1"}
-                          {<GZ>}
 <FALSE>               ::= {"FALSE"} {"false"} {"False"} {"0x0"}
                           {"0x00"} {"0"}
-<BoolType>            ::= {<TRUE>} {<FALSE>}
+<BoolVal>             ::= {<TRUE>} {<FALSE>}
+<BoolType>            ::= {<BoolVal>} {"{"<BoolVal>"}"}
 <MACRO>               ::= (A-Z)(A-Z0-9_)*
 <MACROVAL>            ::= "$(" <MACRO> ")"
 <PcdName>             ::= <TokenSpaceGuidCName> "." <PcdCName>
@@ -211,10 +213,45 @@ The following are common definitions used by multiple section types.
 <IntNum>              ::= (0-65535)
 <LongNum>             ::= (0-4294967295)
 <LongLongNum>         ::= (0-18446744073709551615)
-<NumValUint8>         ::= {<ShortNum>} {<UINT8>}
-<NumValUint16>        ::= {<IntNum>} {<UINT16>}
-<NumValUint32>        ::= {<LongNum>} {<UINT32>}
-<NumValUint64>        ::= {<LongLongNum>} {<UINT64>}
+<ValUint8>            ::= {<ShortNum>} {<UINT8>} {<BoolVal>}
+                          {<CString>} {<UnicodeString>}
+<ValUint16>           ::= {<IntNum>} {<UINT16>} {<BoolVal>}
+                          {<CString>} {<UnicodeString>}
+<ValUint32>           ::= {<LongNum>} {<UINT32>} {<BoolVal>}
+                          {<CString>} {<UnicodeString>}
+<ValUint64>           ::= {<LongLongNum>} {<UINT64>} {<BoolVal>}
+                          {<CString>} {<UnicodeString>}
+<NumValUint8>         ::= {<ValUint8>} {"{"<ValUint8>"}"}
+<NumValUint16>        ::= {<ValUint16>}
+                          {"{"<ValUint8> [<CommaSpace> <ValUint8>]*"}"}
+<NumValUint32>        ::= {<ValUint32>}
+                          {"{"<ValUint8> [<CommaSpace> <ValUint8>]*"}"}
+<NumValUint64>        ::= {<ValUint64>}
+                          {"{"<ValUint8> [<CommaSpace> <ValUint8>]*"}"}
+<StringVal>           ::= {<UnicodeString>} {<CString>} {<Array>}
+<Array>               ::= "{" {<Array>} {[<Lable>] <ArrayVal>
+                           [<CommaSpace> [<Lable>] <ArrayVal>]* } "}"
+<ArrayVal>            ::= {<Num8Array>} {<GuidStr>} {<DevicePath>}
+<NonNumType>          ::= {<BoolVal>} {<UnicodeString>} {<CString>}
+                          {<Offset>} {<UintMac>}
+<Num8Array>           ::= {<NonNumType>} {<ShortNum>} {<UINT8>}
+<Num16Array>          ::= {<NonNumType>} {<IntNum>} {<UINT16>}
+<Num32Array>          ::= {<NonNumType>} {<LongNum>} {<UINT32>}
+<Num64Array>          ::= {<NonNumType>} {<LongLongNum>} {<UINT64>}
+<GuidStr>             ::= "GUID(" <GuidVal> ")"
+<GuidVal>             ::= {<DblQuote> <RegistryFormatGUID> <DblQuote>}
+                          {<CFormatGUID>} {<CName>}
+<DevicePath>          ::= "DEVICE_PATH(" <DevicePathStr> ")"
+<DevicePathStr>       ::= A double quoted string that follow the device path
+                          as string format defined in UEFI Specification 2.6
+                          Section 9.6
+<UintMac>             ::= {<Uint8Mac>} {<Uint16Mac>} {<Uint32Mac>} {<Uint64Mac>}
+<Uint8Mac>            ::= "UINT8(" <Num8Array> ")"
+<Uint16Mac>           ::= "UINT16(" <Num16Array> ")"
+<Uint32Mac>           ::= "UINT32(" <Num32Array> ")"
+<Uint64Mac>           ::= "UINT64(" <Num64Array> ")"
+<Lable>               ::= "LABEL(" <CName> ")"
+<Offset>              ::= "OFFSET_OF(" <CName> ")"
 <ModuleType>          ::= {"BASE"} {"SEC"} {"PEI_CORE"} {"PEIM"}
                           {"DXE_CORE"} {"DXE_DRIVER"} {"SMM_CORE"}
                           {"DXE_RUNTIME_DRIVER"} {"DXE_SAL_DRIVER"}
@@ -235,6 +272,14 @@ The following are common definitions used by multiple section types.
 ```
 
 **********
+**Note:** When using CString, UnicodeString or byte array format as
+UINT8/UINT16/UINT32/UINT64 values, please make sure they fit in the
+target type's size, otherwise tool would report failure.
+**********
+**Note:** LABEL() macro in byte arrays to tag the byte offset of a
+location in a byte array. OFFSET_OF() macro in byte arrays that returns
+the byte offset of a LABEL() declared in a byte array.
+**********
 **Note:** When using the characters "|" or "||" in an expression, the
 expression must be encapsulated in open "(" and close ")" parenthesis.
 **********
@@ -254,10 +299,10 @@ Expression syntax is defined the _EDK II Expression Syntax Specification_.
 **_Unicode String_**
 
 When the `<UnicodeString>` element (these characters are string literals as
-defined by the C99 specification: L"string", not actual Unicode characters) is
-included in a value, the build tools may be required to expand the ASCII string
-between the quotation marks into a valid UCS-2 character encoded string. The
-build tools parser must treat all content between the field separators
+defined by the C99 specification: L"string"/L'string', not actual Unicode
+characters) is included in a value, the build tools may be required to expand
+the ASCII string between the quotation marks into a valid UCS-2 character encoded
+string. The build tools parser must treat all content between the field separators
 (excluding white space characters around the field separators) as ASCII literal
 content when generating the `AutoGen.c` and `AutoGen.h` files.
 
