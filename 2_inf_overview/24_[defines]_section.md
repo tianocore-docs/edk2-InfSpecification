@@ -1,7 +1,7 @@
 <!--- @file
   2.4 [Defines] Section
 
-  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2018, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -58,7 +58,7 @@ The following is an example of a driver's `[Defines]` section.
 
 ```ini
 [Defines]
-  INF_VERSION     = 0x00010019
+  INF_VERSION     = 0x0001001B
   BASE_NAME       = DxeIpl
   FILE_GUID       = 86D70125-BAA3-4296-A62F-602BEBBB9081
   VERSION_STRING  = 1.0
@@ -71,7 +71,7 @@ The following is an example of a library's `[Defines]` section.
 
 ```ini
 [Defines]
-  INF_VERSION    = 1.25
+  INF_VERSION    = 1.27
   BASE_NAME      = BaseMemoryLib
   FILE_GUID      = fd44e603-002a-4b29-9f5f-529e815b6165
   MODULE_TYPE    = BASE
@@ -110,7 +110,7 @@ dispatch instance.
 
 | Tag                          | Required                                                                 | Value                                         | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | ---------------------------- | ------------------------------------------------------------------------ | --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `INF_VERSION`                | REQUIRED                                                                 | 1.25 or 0x00010019                            | This identifies the INF spec. version. Tools use this value to handle parsing of previous releases of the specification if there are incompatible changes.                                                                                                                                                                                                                                                                                          |
+| `INF_VERSION`                | REQUIRED                                                                 | 1.27 or 0x0001001B                            | This identifies the INF spec. version. It is decimal value with fraction or two-nibble hexadecimal representation of the same, for example: 1.27. Tools use this value to handle parsing of previous releases of the specification if there are incompatible changes.                                                                                                                                                                                                                                                                                          |
 | `BASE_NAME`                  | REQUIRED                                                                 | A single word                                 | This is a single word identifier that will be used for the component name.                                                                                                                                                                                                                                                                                                                                                                          |
 | `EDK_RELEASE_VERSION`        | Not required                                                             | Hex Double Word                               | The minimum revision value across the module and all its dependent libraries. If a revision value is not declared in the module or any of the dependent libraries, then the tool may use the value of 0, which disables checking.                                                                                                                                                                                                                   |
 | `PI_SPECIFICATION_VERSION`   | Not required                                                             | Decimal or special format of hex              | The minimum revision value across the module and all its dependent libraries. If a revision value is not declared in the module or any of the dependent libraries, then tools may use the value of 0, which disables checking.                                                                                                                                                                                                                      |

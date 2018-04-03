@@ -1,7 +1,7 @@
 <!--- @file
   README.md for EDK II Module Information (INF) File Specification
 
-  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2018, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -196,3 +196,5 @@ Copyright (c) 2007-2017, Intel Corporation. All rights reserved.
 |            | [#463](https://bugzilla.tianocore.org/show_bug.cgi?id=463) INF spec: document the LIB file type under the [Binaries] Section                                                                                                                                                        |               |
 |            | [#548](https://bugzilla.tianocore.org/show_bug.cgi?id=548) [INF spec] INF [LibraryClasses] section should not support ModuleType                                                                                                                                                    |               |
 |            | [#522](https://bugzilla.tianocore.org/show_bug.cgi?id=522) INF spec: add the clarification that PCD value may from build command                                                                                                                                                    |               |
+| 1.27       | Update version to 1.27                                                                                                                                                                                                                                                              | Mar 2018      |
+|            | Add Flexible PCD value format support                                                                                                                                                                                                                                               |               |

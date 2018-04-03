@@ -1,7 +1,7 @@
 <!--- @file
   Appendix F Sample Binary INF Files
 
-  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2018, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -113,7 +113,7 @@ RuntimeDxe driver in the MdeModulePkg.
 ##
 
 [Defines]
-  INF_VERSION    = 0x00010019
+  INF_VERSION    = 0x0001001B
   BASE_NAME      = RuntimeDxe
   FILE_GUID      = B601F8C4-43B7-4784-95B1-F4226CB40CEE
   MODULE_TYPE    = DXE_RUNTIME_DRIVER

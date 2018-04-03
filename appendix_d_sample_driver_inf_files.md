@@ -1,7 +1,7 @@
 <!--- @file
   Appendix D Sample Driver INF Files
 
-  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2018, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -63,7 +63,7 @@ driver modules.
 ##
 
 [Defines]
-  INF_VERSION     = 0x00010019
+  INF_VERSION     = 0x0001001B
   BASE_NAME       = DiskIoDxe
   MODULE_UNI_FILE = DiskIoDxe.uni
   FILE_GUID       = 6B38F7B4-AD98-40e9-9093-ACA2B5A253C4
@@ -123,7 +123,7 @@ driver modules.
 ##
 
 [Defines]
-  INF_VERSION     = 0x00010019
+  INF_VERSION     = 0x0001001B
   BASE_NAME       = StatusCodeRuntimeDxe
   MODULE_UNI_FILE = StatusCodeRuntimeDxe.uni
   FILE_GUID       = FEDE0A1B-BCA2-4A9F-BB2B-D9FD7DEC2E9F

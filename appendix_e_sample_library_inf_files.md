@@ -1,7 +1,7 @@
 <!--- @file
   Appendix E Sample Library INF Files
 
-  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2018, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -59,7 +59,7 @@ DxeCoreMemoryAllocationLib.inf and SmmCorePerformanceLib.inf.
 ##
 
 [Defines]
-  INF_VERSION     = 0x00010019
+  INF_VERSION     = 0x0001001B
   BASE_NAME       = PeiServicesTablePointerLib
   MODULE_UNI_FILE = PeiServicesTablePointerLib.uni
   FILE_GUID       = 1c747f6b-0a58-49ae-8ea3-0327a4fa10e3
@@ -109,7 +109,7 @@ DxeCoreMemoryAllocationLib.inf and SmmCorePerformanceLib.inf.
 ##
 
 [Defines]
-  INF_VERSION    = 0x00010019
+  INF_VERSION    = 0x0001001B
   BASE_NAME      = DxeCoreMemoryAllocationLib
   FILE_GUID      = 632F3FAC-1CA4-4725-BAA2-BDECCF9A111C
   MODULE_TYPE    = DXE_CORE
@@ -165,7 +165,7 @@ DxeCoreMemoryAllocationLib.inf and SmmCorePerformanceLib.inf.
 ##
 
 [Defines]
-  INF_VERSION              = 0x00010019
+  INF_VERSION              = 0x0001001B
   BASE_NAME                = SmmCorePerformanceLib
   FILE_GUID                = 36290D10-0F47-42c1-BBCE-E191C7928DCF
   MODULE_TYPE              = SMM_CORE

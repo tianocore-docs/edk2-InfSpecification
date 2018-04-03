@@ -1,7 +1,7 @@
 <!--- @file
   3.4 [Defines] Section
 
-  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2018, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -40,11 +40,11 @@ file is created during installation of a UEFI distribution package or by the
 developer and is an input to the new build tool parsing utilities. Elements may
 appear in any order within this section.
 
-The version for this specification is "0x00010019" and new versions of this
-specification must increment the minor (0019) portion of the specification code
+The version for this specification is "0x0001001B" and new versions of this
+specification must increment the minor (001B) portion of the specification code
 for backward compatible changes, and increment the major number for
 non-backward compatible specification changes. This value may also be specified
-as a decimal value, 1.25.
+as a decimal value, 1.27.
 
 The `[Defines]` section assigns values to the symbols that describe the
 component. Some items are emitted to the output makefile, others are used to
@@ -56,9 +56,9 @@ the FW volume file list used by build tools to generate the final firmware
 volume, as well as processed in some SMM, PEI or DXE `DEPEX` statements.
 
 All new EDK II INF files must include one of the following statements:
-`INF_VERSION = 0x00010019` or `INF_VERSION = 1.25` in this section, where the
+`INF_VERSION = 0x0001001B` or `INF_VERSION = 1.27` in this section, where the
 number varies according to the release of this specification. It is a
-HexVersion type, where the 0x0001 is the major number, and the 0019 is the
+HexVersion type, where the 0x0001 is the major number, and the 001B is the
 minor number. This version of the specification provides full backward
 compatibility to all previous versions. This means that tools that process
 this version of the specification can also process earlier versions of
@@ -200,11 +200,11 @@ where the module type is not a member of `<Edk2ModuleType>`.
 
 **_INF_VERSION_**
 
-For new INF files, the version value must be set to `0x00010019`. Tools that
+For new INF files, the version value must be set to `0x0001001B`. Tools that
 process this version of the INF file can successfully process earlier versions
 of the INF file (this is a backward compatible update). There is no requirement
 to change the value in existing INF files if no other content changes. This may
-also be specified as decimal value, 1.25.
+also be specified as decimal value, 1.27.
 
 **_EDK_RELEASE_VERSION_**
 
@@ -302,7 +302,7 @@ Writer's Guide for more information.
 
 ```ini
 [Defines]
-  INF_VERSION                = 1.25
+  INF_VERSION                = 1.27
   BASE_NAME                  = PlatformAcpiTable
   FILE_GUID                  = 7E374E25-8E01-4FEE-87F2-390C23C606CD
   MODULE_TYPE                = DXE_DRIVER
@@ -315,7 +315,7 @@ Writer's Guide for more information.
 
 ```ini
 [Defines]
-  INF_VERSION    = 0x00010019
+  INF_VERSION    = 0x0001001B
   BASE_NAME      = Abc
   FILE_GUID      = DA87D340-15C0-4824-9BF3-D52286674BEF
   MODULE_TYPE    = UEFI_DRIVER
@@ -328,7 +328,7 @@ Writer's Guide for more information.
 
 ```ini
 [Defines]
-  INF_VERSION    = 1.25
+  INF_VERSION    = 1.27
   BASE_NAME      = LzmaCustomDecompressLib
   FILE_GUID      = 22f8406f-43ee-492f-82f5-4e8a1a58e6d2
   MODULE_TYPE    = BASE
