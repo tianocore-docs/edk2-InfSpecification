@@ -1,7 +1,7 @@
 <!--- @file
   3.2 Component INF Definition
 
-  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2018, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -427,7 +427,11 @@ The conditional statements are not permitted anywhere within the INF file.
 
 The `!include` statement is not permitted in an EDK II INF file.
 
-### 3.2.5 Special Comment Blocks
+### 3.2.5 !error Statement
+
+The `!error` statement is not permitted in an EDK II INF file.
+
+### 3.2.6 Special Comment Blocks
 
 This section defines special format comment blocks that contain information
 about this module. These comment blocks are not required. They may appear at

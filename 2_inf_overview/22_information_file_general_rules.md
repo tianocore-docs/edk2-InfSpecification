@@ -1,7 +1,7 @@
 <!--- @file
   2.2 Information File General Rules
 
-  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2018, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -331,7 +331,11 @@ satisfy a library class dependency.
 
 Conditional statements are NOT permitted in the EDK II INF files.
 
-### 2.2.8 Expressions
+### 2.2.8 !error Statement
+
+The `!error` statement is NOT permitted in the EDK II INF files.
+
+### 2.2.9 Expressions
 
 Expressions are supported in specific statements within the EDK II INF files.
 The expression syntax is defined in the _EDK II Expression Syntax
