@@ -143,7 +143,7 @@ recommended.
                        [<TS> "PI_SPECIFICATION_VERSION" <Eq>
                        <VersionVal> <EOL>]
                        [<TS> "LIBRARY_CLASS" <Eq> <LibClass> <EOL>]*
-                       [<TS> "BUILD_NUMBER" <Eq> <NumValUint16> <EOL>]
+                       [<TS> "BUILD_NUMBER" <Eq> <UINT16> <EOL>]
                        [<TS> "VERSION_STRING" <Eq>
                        <DecimalVersion> <EOL>]
                        [<TS> "PCD_IS_DRIVER" <Eq>
