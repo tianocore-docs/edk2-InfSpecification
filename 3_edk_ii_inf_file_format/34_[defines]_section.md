@@ -173,7 +173,7 @@ recommended.
 <FFE>              ::= <FS> <Expression>
 <SpecVersion>      ::= {<HexVersion>} {(0-9))+ "." (0-9)+}
 <OptionRomInfo>    ::= <TS> "PCI_VENDOR_ID" <Eq> <UINT16> <EOL>
-                       <TS> "PCI_DEVICE_ID" <Eq> <UNIT16> <EOL>
+                       <TS> "PCI_DEVICE_ID" <Eq> <UNIT16> [<MTS> <UINT16>]* <EOL>
                        <TS> "PCI_CLASS_CODE" <Eq> <UINT8> <EOL>
                        <TS> "PCI_REVISION" <Eq> <UINT8> <EOL>
                        [<TS> "PCI_COMPRESS" <Eq> <TruFal> <EOL>]
