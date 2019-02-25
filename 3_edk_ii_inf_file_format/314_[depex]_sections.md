@@ -181,7 +181,7 @@ and VOID* datum type, and the size of the PCD must be 16 bytes.
                          ["END" <EOL>]
 <PeiDepexStatements> ::= {<BoolStmt>} {<DepInstruct>}
 <SmmDepex>           ::= <DxeDepex>
-<GuidOrPcdStmt>      ::= {"BEFORE"} {"AFTER"} <GuidOrPcdName> [<EOL>]
+<GuidOrPcdStmt>      ::= [{"BEFORE"} {"AFTER"}] <GuidOrPcdName> [<EOL>]
 <GuidOrPcdName>      ::= {<GuidCName>} {<PcdName>}
 <DepInstruct>        ::= "PUSH" <CFormatGUID> [<EOL>]
 <SorStmt>            ::= "SOR" <BoolStmt> [<EOL>]
