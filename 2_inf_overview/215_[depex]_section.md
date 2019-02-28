@@ -1,7 +1,7 @@
 <!--- @file
   2.15 [Depex] Section
 
-  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -30,9 +30,6 @@
 -->
 
 ## 2.15 [Depex] Section
-
-The EDK II `[Depex]` section is a replacement for the `DPX_SOURCE` file using
-in EDK (the file is specified in the nmake section of an EDK INF file.)
 
 This section is used for specifying a `Depex` expression, not a binary file. In
 the "As Built" INF files, this section contains a comment that lists the full
@@ -89,7 +86,6 @@ The Depex section headers start with one of the following:
 [Depex]
 [Depex.IA32]
 [Depex.X64]
-[Depex.IPF]
 [Depex.EBC]
 [Depex.common]
 ```

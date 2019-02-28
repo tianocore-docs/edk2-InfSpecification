@@ -1,7 +1,7 @@
 <!--- @file
   2.5 [Sources] Section
 
-  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -66,7 +66,6 @@ This section will typically use one of the following section definitions:
 [Sources.common]
 [Sources.IA32]
 [Sources.X64]
-[Sources.IPF]
 [Sources.EBC]
 ```
 
@@ -93,9 +92,6 @@ The following is an example for sources sections.
 [Sources.X64]
   X64/DxeLoadFunc.c
 
-[Sources.IPF]
-  Ipf/DxeLoadFunc.c
-  Ipf/ImageRead.c
 ```
 
 All Unicode files must be listed in the source section. If a Unicode file,

@@ -1,7 +1,7 @@
 <!--- @file
   2.14 PCD Sections
 
-  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -31,9 +31,9 @@
 
 ## 2.14 PCD Sections
 
-These sections are used for specifying PCD information and are valid for EDK
-II modules only. The entries for these sections are looked up from the package
-declaration files (DEC) for generating the `AutoGen.c` and `AutoGen.h` files.
+These sections are used for specifying PCD information. The entries for these 
+sections are looked up from the packagedeclaration files (DEC) for generating 
+the `AutoGen.c` and `AutoGen.h` files.
 
 The PCD's Name (`PcdName`) is defined as PCD Token Space GUID C name and the
 PCD C name - separated by a period "." character. Unique PCDs are identified
@@ -45,7 +45,7 @@ PCDs listed in architectural sections must not be listed in common
 architectural sections. It is not possible for a PCD to be valid for only IA32
 and also valid for any architecture.
 
-A PCD may be valid for IA32 and X64 and invalid for EBC and IPF usage, so
+A PCD may be valid for IA32 and X64 and invalid for EBC usage, so
 mixing of specific architectural modifiers is permitted.
 
 This section defines how a module has been coded to access a PCD. A PCD can
@@ -92,7 +92,6 @@ one of the following section definitions:
 [(PcdType).common]
 [(PcdType).IA32]
 [(PcdType).X64]
-[(PcdType).IPF]
 [(PcdType).EBC]
 ```
 
@@ -143,7 +142,6 @@ definitions:
 [FixedPcd.common]
 [FixedPcd.IA32]
 [FixedPcd.X64]
-[FixedPcd.IPF]
 [FixedPcd.EBC]
 ```
 
@@ -169,7 +167,6 @@ character. This section uses one of the following section definitions:
 [PatchPcd]
 [PatchPcd.IA32]
 [PatchPcd.X64]
-[PatchPcd.IPF]
 [PatchPcd.EBC]
 [PatchPcd.common]
 ```
@@ -195,7 +192,6 @@ binary only module. This section uses one of the following section definitions:
 [FeaturePcd.common]
 [FeaturePcd.IA32]
 [FeaturePcd.X64]
-[FeaturePcd.IPF]
 [FeaturePcd.EBC]
 ```
 
@@ -223,7 +219,6 @@ following section definitions:
 [Pcd.common]
 [Pcd.IA32]
 [Pcd.X64]
-[Pcd.IPF]
 [Pcd.EBC]
 ```
 
@@ -249,7 +244,6 @@ format. This section uses one of the following section definitions:
 [PcdEx.common]
 [PcdEx.IA32]
 [PcdEx.X64]
-[PcdEx.IPF]
 [PcdEx.EBC]
 ```
 

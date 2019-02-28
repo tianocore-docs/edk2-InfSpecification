@@ -1,7 +1,7 @@
 <!--- @file
   Appendix B Build Changes and Customizations
 
-  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -29,9 +29,9 @@
 
 -->
 
-# Appendix B Build Changes and Customizations
+# Appendix A Build Changes and Customizations
 
-## B.1 Customizing EDK Compilation for a Component
+## A.1 Customizing EDK Compilation for a Component
 
 There are several mechanisms for customizing the build for a firmware
 component. These include:
@@ -55,7 +55,7 @@ component. These include:
   using `!IFDEF` statements in the `[build.$(PROCESSOR).$(COMPONENT_TYPE)]`
   section to perform custom steps.
 
-## B.2 Changing Files in an EDK Library
+## A.2 Changing Files in an EDK Library
 
 Library INF files are shared among different platforms. However, not all
 platforms require all the same source files. To customize the library INF files
@@ -66,7 +66,7 @@ line, or in the DSC file, and then make customizations in the
 An alternative to this method is to simply create a new INF file for the
 library, and then use it in place of the existing library INF file
 
-## B.3 Customizing EDK II Compilation for a Module Common Definitions
+## A.3 Customizing EDK II Compilation for a Module Common Definitions
 
 The preferred method for customizing a build is to copy the source module
 directory to a new directory and modifying the INF file and module sources.

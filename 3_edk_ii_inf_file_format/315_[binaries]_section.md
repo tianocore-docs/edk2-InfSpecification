@@ -1,7 +1,7 @@
 <!--- @file
   3.15 [Binaries] Section
 
-  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -187,9 +187,4 @@ PDB or SYMS files generated for symbolic debugging.
   DXE_DEPEX|Debug/X64/DxeIpl.dpx          # MYTOOLS
   PE32|Debug/X64/DxeIpl.efi|DEBUG         # MYTOOLS
   DISPOSABLE|Debug/X64/DxeIpl.pdb|DEBUG
-
-[Binaries.IPF]
-  DXE_DEPEX|Debug/IPF/DxeIpl.dpx          # MYTOOLS
-  PE32|Debug/Ipf/DxeIpl.efi|DEBUG         # MYTOOLS
-  DISPOSABLE|Debug/Ipf/DxeIpl.pdb|DEBUG
 ```

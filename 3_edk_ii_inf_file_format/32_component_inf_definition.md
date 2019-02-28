@@ -1,7 +1,7 @@
 <!--- @file
   3.2 Component INF Definition
 
-  Copyright (c) 2007-2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -262,7 +262,7 @@ The following are common definitions used by multiple section types.
 <Boolean>             ::= {<BoolType>} {<Expression>}
 <EOL>                 ::= <TS> 0x0D 0x0A
 <OA>                  ::= (a-zA-Z)(a-zA-Z0-9)*
-<arch>                ::= {"IA32"} {"X64"} {"IPF"} {"EBC"} {<OA>}
+<arch>                ::= {"IA32"} {"X64"} {"EBC"} {<OA>}
 <Edk2ModuleType>      ::= {"BASE"} {"SEC"} {"PEI_CORE"} {"PEIM"}
                           {"DXE_CORE"} {"DXE_DRIVER"}
                           {"DXE_SAL_DRIVER"}
@@ -324,7 +324,7 @@ must not be expanded by parsing tools.
 
 Other Architecture - One or more user defined target architectures, such as ARM
 or PPC. The architectures listed here must have a corresponding entry in the
-EDK II meta-data file, `Conf/tools_def.txt`. Only IA32, X64, IPF and EBC are
+EDK II meta-data file, `Conf/tools_def.txt`. Only IA32, X64 and EBC are
 routinely validated.
 
 **_ExtendedLine_**

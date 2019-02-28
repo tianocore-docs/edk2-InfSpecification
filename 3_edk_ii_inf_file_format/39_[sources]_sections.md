@@ -1,7 +1,7 @@
 <!--- @file
   3.9 [Sources] Sections
 
-  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -50,13 +50,8 @@ as the INF file. Absolute paths in the filename are prohibited.
 There can be multiple sources sections, depending on the target processor.
 Example sources sections are listed below. The parsing utility creates a
 directory path for each file (`$(DEST_DIR)...\MyFile.c`), and looks up the
-makefile template for the `COMPONENT_TYPE` (EDK) or `MODULE_TYPE` (EDK II) to
+makefile template for the `MODULE_TYPE` (EDK II) to
 emit.
-
-It is not permissible to mix EDK and EDK II style files within a module.
-
-The macro, `TABLE_NAME` may be used in existing EDK INF files that point to
-ACPI tables, this value will be ignored by EDK II build tools.
 
 All HII Unicode format files must be listed in this section as well as any
 other "source" type file, such as local module header files, Vfr files, etc.

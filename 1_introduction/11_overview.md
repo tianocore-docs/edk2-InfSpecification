@@ -1,7 +1,7 @@
 <!--- @file
   1.1 Overview
 
-  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -42,7 +42,7 @@ specification must not require changes to existing INF files.
 **Simplified platform build and configuration**
 
 Simplify the build setup and configuration for a given platform. The process of
-adding EDK and EDK II firmware components to a firmware volume on any given
+adding EDK II firmware components to a firmware volume on any given
 platform was also simplified.
 
 **Distributing Modules**

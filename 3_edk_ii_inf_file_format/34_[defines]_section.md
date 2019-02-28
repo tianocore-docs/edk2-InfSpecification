@@ -1,7 +1,7 @@
 <!--- @file
   3.4 [Defines] Section
 
-  Copyright (c) 2007-2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -64,10 +64,6 @@ compatibility to all previous versions. This means that tools that process
 this version of the specification can also process earlier versions of
 EDK II INF files.
 
-This version of the specification removes content in this section that was
-associated with EDK libraries and components. The section now lists only the
-defined EDK II symbols and format.
-
 **********
 **Note:** Possible values for `MODULE_TYPE`, and their descriptions, are
 listed in the table, "EDK II Module Types." For each module, the `BASE_NAME`
@@ -75,7 +71,7 @@ and `MODULE_TYPE` are required. The `BASE_NAME` definition is case
 sensitive as it will be used to create a directory name during a build.
 **********
 
-Unlike EDK, only the `[Defines]` section tag is valid for EDK II INF files -
+Only the `[Defines]` section tag is valid for EDK II INF files -
 architectural modifiers for the `[Defines]` section tag are not permitted. The
 section is processed in order by the parsing utilities. Assignments of
 variables in other sections override previous assignments.

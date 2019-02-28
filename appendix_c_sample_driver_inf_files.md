@@ -1,7 +1,7 @@
 <!--- @file
   Appendix D Sample Driver INF Files
 
-  Copyright (c) 2007-2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -29,14 +29,14 @@
 
 -->
 
-# Appendix D Sample Driver INF Files
+# Appendix C Sample Driver INF Files
 
 The following INF file example are from EDK II
 `MdeModulePkg/Universal/Disk/DiskIoDxe/DiskIoDxe.inf` and
 `IntelFrameworkModulePkg/Universal/StatusCode/RuntimeDxe/StatusCodeRuntimeDxe.inf`
 driver modules.
 
-## D.1 DiskIoDxe INF file
+## C.1 DiskIoDxe INF file
 
 ```ini
 ## @file
@@ -103,7 +103,7 @@ driver modules.
   gEfiBlockIoProtocolGuid  ## TO_START
 ```
 
-## D.2 StatusCodeRuntimeDxe INF file
+## C.2 StatusCodeRuntimeDxe INF file
 
 ```ini
 ## @file

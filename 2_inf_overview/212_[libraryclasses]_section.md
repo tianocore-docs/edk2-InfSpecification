@@ -1,7 +1,7 @@
 <!--- @file
   2.12 [LibraryClasses] Section
 
-  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -48,7 +48,6 @@ This section uses one of the following section definitions:
 [LibraryClasses.common]
 [LibraryClasses.IA32]
 [LibraryClasses.X64]
-[LibraryClasses.IPF]
 [LibraryClasses.EBC]
 ```
 

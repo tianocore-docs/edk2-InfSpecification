@@ -1,7 +1,7 @@
 <!--- @file
   Summary
 
-  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -71,25 +71,22 @@
   * [3.13 [Guids] Sections](3_edk_ii_inf_file_format/313_[guids]_sections.md#313-guids-sections)
   * [3.14 [Depex] Sections](3_edk_ii_inf_file_format/314_[depex]_sections.md#314-depex-sections)
   * [3.15 [Binaries] Section](3_edk_ii_inf_file_format/315_[binaries]_section.md#315-binaries-section)
-* [Appendix A EDK INF File Specification](appendix_a_edk_inf_file_specification/README.md#appendix-a-edk-inf-file-specification)
-  * [A.1 Design Discussion](appendix_a_edk_inf_file_specification/a1_design_discussion.md#a1-design-discussion)
-  * [A.2 EDK File Specification](appendix_a_edk_inf_file_specification/a2_edk_file_specification.md#a2-edk-file-specification)
-* [Appendix B Build Changes and Customizations](appendix_b_build_changes_and_customizations.md#appendix-b-build-changes-and-customizations)
-  * [B.1 Customizing EDK Compilation for a Component](appendix_b_build_changes_and_customizations.md#b1-customizing-edk-compilation-for-a-component)
-  * [B.2 Changing Files in an EDK Library](appendix_b_build_changes_and_customizations.md#b2-changing-files-in-an-edk-library)
-  * [B.3 Customizing EDK II Compilation for a Module Common Definitions](appendix_b_build_changes_and_customizations.md#b3-customizing-edk-ii-compilation-for-a-module-common-definitions)
-* [Appendix C Symbols](appendix_c_symbols.md#appendix-c-symbols)
-* [Appendix D Sample Driver INF Files](appendix_d_sample_driver_inf_files.md#appendix-d-sample-driver-inf-files)
-  * [D.1 DiskIoDxe INF file](appendix_d_sample_driver_inf_files.md#d1-diskiodxe-inf-file)
-  * [D.2 StatusCodeRuntimeDxe INF file](appendix_d_sample_driver_inf_files.md#d2-statuscoderuntimedxe-inf-file)
-* [Appendix E Sample Library INF Files](appendix_e_sample_library_inf_files.md#appendix-e-sample-library-inf-files)
-  * [E.1 PeiServicesTablePointerLib.inf](appendix_e_sample_library_inf_files.md#e1-peiservicestablepointerlibinf)
-  * [E.2 DxeCoreMemoryAllocationLib.inf](appendix_e_sample_library_inf_files.md#e2-dxecorememoryallocationlibinf)
-  * [E.3 SmmCorePerformanceLib.inf](appendix_e_sample_library_inf_files.md#e3-smmcoreperformancelibinf)
-* [Appendix F Sample Binary INF Files](appendix_f_sample_binary_inf_files.md#appendix-f-sample-binary-inf-files)
-  * [F.1 FatBinPkg/EnhancedFatDxe/Fat.inf](appendix_f_sample_binary_inf_files.md#f1-fatbinpkgenhancedfatdxefatinf)
-  * [F.2 MdeModulePkg/Core/RuntimeDxe.inf](appendix_f_sample_binary_inf_files.md#f2-mdemodulepkgcoreruntimedxeinf)
-* [Appendix G Module Types](appendix_g_module_types.md#appendix-g-module-types)
+* [Appendix A Build Changes and Customizations](appendix_a_build_changes_and_customizations.md#appendix-a-build-changes-and-customizations)
+  * [A.1 Customizing EDK Compilation for a Component](appendix_a_build_changes_and_customizations.md#a1-customizing-edk-compilation-for-a-component)
+  * [A.2 Changing Files in an EDK Library](appendix_a_build_changes_and_customizations.md#a2-changing-files-in-an-edk-library)
+  * [A.3 Customizing EDK II Compilation for a Module Common Definitions](appendix_a_build_changes_and_customizations.md#a3-customizing-edk-ii-compilation-for-a-module-common-definitions)
+* [Appendix B Symbols](appendix_b_symbols.md#appendix-b-symbols)
+* [Appendix C Sample Driver INF Files](appendix_c_sample_driver_inf_files.md#appendix-c-sample-driver-inf-files)
+  * [C.1 DiskIoDxe INF file](appendix_c_sample_driver_inf_files.md#c1-diskiodxe-inf-file)
+  * [C.2 StatusCodeRuntimeDxe INF file](appendix_c_sample_driver_inf_files.md#c2-statuscoderuntimedxe-inf-file)
+* [Appendix D Sample Library INF Files](appendix_d_sample_library_inf_files.md#appendix-d-sample-library-inf-files)
+  * [D.1 PeiServicesTablePointerLib.inf](appendix_d_sample_library_inf_files.md#d1-peiservicestablepointerlibinf)
+  * [D.2 DxeCoreMemoryAllocationLib.inf](appendix_d_sample_library_inf_files.md#d2-dxecorememoryallocationlibinf)
+  * [D.3 SmmCorePerformanceLib.inf](appendix_d_sample_library_inf_files.md#d3-smmcoreperformancelibinf)
+* [Appendix E Sample Binary INF Files](appendix_e_sample_binary_inf_files.md#appendix-e-sample-binary-inf-files)
+  * [E.1 FatBinPkg/EnhancedFatDxe/Fat.inf](appendix_e_sample_binary_inf_files.md#e1-fatbinpkgenhancedfatdxefatinf)
+  * [E.2 MdeModulePkg/Core/RuntimeDxe.inf](appendix_e_sample_binary_inf_files.md#e2-mdemodulepkgcoreruntimedxeinf)
+* [Appendix F Module Types](appendix_f_module_types.md#appendix-f-module-types)
 ---
 * Tables
   * [Table 1 EDK II [Defines] Section Elements](2_inf_overview/24_[defines]_section.md#table-1-edk-ii-defines-section-elements)

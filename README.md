@@ -1,7 +1,7 @@
 <!--- @file
   README.md for EDK II Module Information (INF) File Specification
 
-  Copyright (c) 2007-2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -201,3 +201,4 @@ Copyright (c) 2007-2017, Intel Corporation. All rights reserved.
 |            | Add clarification that !error statement is not permitted in INF file                                                                                                                                                                                                                |               |
 |            | INF Spec: FixedAtBuild (VOID*) PCD use in the [DEPEX] section                                                                                                                                                                                                                       |               |
 |            | [#1162](https://bugzilla.tianocore.org/show_bug.cgi?id=1162) Correct the item in Table 1 to align with 3.4 section                                                                                                                                                                  |               |
+| 1.28       | [#1453](https://bugzilla.tianocore.org/show_bug.cgi?id=1453) Update INF spec to remove EDK related contents                                                                                                                                                                                                                                                                                                                        | Mar 2019      |

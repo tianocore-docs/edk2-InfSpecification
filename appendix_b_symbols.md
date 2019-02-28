@@ -1,7 +1,7 @@
 <!--- @file
   Appendix C Symbols
 
-  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -29,7 +29,7 @@
 
 -->
 
-# Appendix C Symbols
+# Appendix B Symbols
 
 One of the core concepts of this utility is the notion of symbols. Use of
 symbols follows the makefile convention of enclosing within `$()`, for example

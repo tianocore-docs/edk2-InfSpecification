@@ -1,7 +1,7 @@
 <!--- @file
   2.6 [BuildOptions] Section
 
-  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -72,17 +72,10 @@ shown above.
 |             |            |            | By not specifying the `FAMILY`, the tools assume the flags are applicable to all families.                                                                                                                                                  |
 | `TARGET`    | YES        | Yes = *    | `Conf/tools_def.txt` file defines two values: `DEBUG` and `RELEASE`. Developers may define additional targets.                                                                                                                              |
 | `TAGNAME`   | YES        | Yes = *    | `Conf/tools_def.txt` file defines several different tag names - these are defined by developers; the default tag name, `MYTOOLS`, is provided in the template for tools_def.txt and set in the `Conf/target.txt` file.                      |
-| `ARCH`      | YES        | Yes = *    | `Conf/tools_def.txt` defines at least four architectures: `IA32`, `X64`, `IPF` and `EBC`. This tag must use all capital letters for the tag. Additional Architectures, such as PPC or ARM may be added as support becomes available.        |
+| `ARCH`      | YES        | Yes = *    | `Conf/tools_def.txt` defines at least four architectures: `IA32`, `X64` and `EBC`. This tag must use all capital letters for the tag. Additional Architectures, such as PPC or ARM may be added as support becomes available.        |
 | `TOOLCODE`  | YES        | NO         | The tool code must be one of the defined tool codes in the `Conf/tools_def.txt` file. The flags defined in this section are appended to flags defined in the `tools_def.txt` file for individual tools.                                     |
 |             |            |            | EXCEPTION: If the INF `MODULE_TYPE`, defined in the `[Defines]` section is `USER_DEFINED`, then the flags listed in this section are the only flags used for the TOOLCODE command specified in `Conf/ tools_def.txt`.                       |
 | `ATTRIBUTE` | YES        | NO         | The attribute must be specific to the tool code and must be a valid attribute handled by the build system.                                                                                                                                  |
-
-**********
-**Note:** Regarding the EDK and EDK II distinctions in the table: Many EDK INF
-files must be processed by the EDK II build system, but no EDK INF
-specification exists. Therefore, items of this kind are listed in Appendix A
-for completeness. This limits what can be in an EDK INF file as well.
-**********
 
 Developers should use extreme caution when specifying items in this section.
 The EDK II build is designed to support multiple compilers and tool chains,

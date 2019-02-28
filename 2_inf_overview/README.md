@@ -1,7 +1,7 @@
 <!--- @file
   2 INF Overview
 
-  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -61,17 +61,6 @@ library class API headers allows for platform integrators to select a library
 instance that is suitable for their platform. This usage model frees the driver
 developer from coding a module to specific library instances. Libraries are
 really nothing more than modules with pre-defined APIs.
-
-Each module may have one or more INF files that can be used by tools to
-generate images. Specifically, the EDK Compatibility Package will contain two
-INF files for any module that contains assembly code. Since the ECP can be used
-with existing EDK tools (which is only supported by Microsoft and Intel Windows
-based tools,) a separate INF file to support the multiple tool chain capability
-of the EDK II build system must be provided for the modules that contain
-assembly code. The EDK II ECP will use the `basename_edk2.inf` for the filename
-of the EDK II build system compatible INF files for non-Windows based tool
-chains, and use just the `basename.inf` for the filename of EDK only INF files
-used by the EDK build system.
 
 **********
 **Note:** Path and Filename elements within the INF are case-sensitive in order

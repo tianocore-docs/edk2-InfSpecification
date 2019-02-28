@@ -1,7 +1,7 @@
 <!--- @file
   2.7 [Binaries] Section
 
-  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -65,7 +65,6 @@ This section uses one of the following section definitions:
 [Binaries.common]
 [Binaries.IA32]
 [Binaries.X64]
-[Binaries.IPF]
 [Binaries.EBC]
 ```
 
@@ -195,8 +194,4 @@ The following are examples of different types of `[Binaries]` sections.
 [Binaries.X64]
   DXE_DEPEX|X64/DxeIpl.dpx              # MYTOOLS
   PE32|X64/DxeIpl.efi                   # MYTOOLS
-
-[Binaries.IPF]
-  DXE_DEPEX|IPF/DxeIpl.dpx              # MYTOOLS
-  PE32|Ipf/DxeIpl.efi                   # MYTOOLS
 ```

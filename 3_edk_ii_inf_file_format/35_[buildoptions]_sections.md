@@ -1,7 +1,7 @@
 <!--- @file
   3.5 [BuildOptions] Sections
 
-  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -125,7 +125,7 @@ other architecture type; doing so will result in a build break.
 <CmdCode>       ::= CommandCode
 <CommandName>   ::= CommandExecutable
 <Attribute>     ::= Attribute
-<tarch>         ::= {"IA32"} {"X64"} {"IPF"} {"EBC"} {<OA>}
+<tarch>         ::= {"IA32"} {"X64"} {"EBC"} {<OA>}
                     {<Wildcard>}
 <CFlags>        ::= (0x20 - 0x7e)+
 <PathCmd>       ::= <TOOLPATH> <FileSep> <CommandName>
@@ -181,7 +181,7 @@ when a development platform is IA32 and the target platform is X64 Using this
 field, a single `TagName` can be setup to support building multiple target
 platform architectures with different tool chains. As an example, if a
 developer is using Visual Studio .NET 2003 for generating IA32 platform and
-uses the WINDDK version 3790.1830 for X64 or IPF platform images, a single tag
+uses the WINDDK version 3790.1830 for X64 platform images, a single tag
 (see the MYTOOLS PATH settings in the generated `Conf/tools_def.txt` or
 provided `BaseTools/Conf/tools_def.template` file.) The wildcard character,
 "``*", is permitted if and only if the same tool is used for all target
@@ -260,5 +260,4 @@ strings.
   *_VS2003_*_CC_FLAGS           = /wd4244
   *_WINDDK3790x1830_*_CC_FLAGS  = /wd4244
   *_MYTOOLS_*_CC_FLAGS          = /wd4244
-  RELEASE_MYTOOLS_IPF_ASM_FLAGS = = -N us -X explicit -M ilp64 - N so -W3 MSFT:*_*_*_*_FLAGS = /od $(MACRO)
 ```

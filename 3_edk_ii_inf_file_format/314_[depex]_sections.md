@@ -1,7 +1,7 @@
 <!--- @file
   3.14 [Depex] Sections
 
-  Copyright (c) 2007-2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -37,10 +37,8 @@ These are optional sections
 
 Defines the optional EDK II INF file `[Depex]` section content. The `[Depex]`
 section is a replacement for the dependency file specified by the driver
-writer. The `DPX_SOURCE` in the `[Defines]` section an EDK INF file will
-over-ride the dependency specified here. This section can be used for
-inheritance from libraries, by supporting logical AND'ing of the different
-Depex expressions together.
+writer. This section can be used for inheritance from libraries, by supporting 
+logical AND'ing of the different Depex expressions together.
 
 The Rules would be as follows:
 

@@ -1,7 +1,7 @@
 <!--- @file
   2.2 Information File General Rules
 
-  Copyright (c) 2007-2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -31,18 +31,14 @@
 
 ## 2.2 Information File General Rules
 
-This section covers the format for the EDK II module INF files. While the EDK
-code base and tools treated libraries completely separate from modules, the EDK
-II code base and tools process modules, with libraries being considered a
+This section covers the format for the EDK II module INF files. The EDK
+II code base and tools process modules, with libraries is considered a
 module that produces a library class.
 
 ### 2.2.1 Section Entries
 
-To simplify parsing, the EDK II meta-data files continue using the INI format.
-This style was introduced for EDK meta-data files, when only the Windows tool
-chains were supported. It was decided that for compatibility purposes, that INI
-format would continue to be used. EDK II formats differ from the defacto format
-in that the semicolon ";" character cannot be used to indicate a comment.
+The EDK II meta-data files use the INI format. The semicolon ";" character cannot 
+be used to indicate a comment in the EDK II format.
 
 Leading and trailing space/tab characters must be ignored.
 
@@ -54,7 +50,7 @@ different sections and their usage are described below. The text of a given
 section can be used for multiple section names by separating the section names
 with a comma. For example:
 
-`[Sources.X64, Sources.IPF]`
+`[Sources.X64, Sources.IA32]`
 
 The content below each section heading is processed by the parsing utilities in
 the order that they occur in the file. The precedence for processing these
@@ -186,10 +182,9 @@ case sensitive because of multiple environment support.
   containing the INF file.
 
 * Additionally, all EDK II directories that are architecturally dependent must
-  use a name with only the first character capitalized. Ia32, Ipf, X64 and Ebc
-  are valid architectural directory names. IA32, IPF and EBC are not acceptable
-  directory names, and may cause build breaks. From a build tools perspective,
-  IA32 is not equivalent to Ia32 or ia32.
+  use a name with only the first character capitalized. Ia32 is valid architectural 
+  directory names. IA32 is not acceptable directory names, and may cause build 
+  breaks. From a build tools perspective, IA32 is not equivalent to Ia32 or ia32.
 
 * Absolute paths are not permitted in EDK II INF files. All paths specified are
   relative to an EDK II package directory (defined as a directory containing a
@@ -209,10 +204,10 @@ C Code files, and as well as specifying the rules for directory and file names.
 This section is meant to highlight those rules as they apply to the content of
 the INF files.
 
-Architecture keywords (`IA32`, `IPF`, `X64` and `EBC`) are used by build tools
+Architecture keywords (`IA32`, `X64`, and `EBC`) are used by build tools
 and in metadata files for describing alternate threads for processing of files.
 These keywords must not be used for describing directory paths. Additionally,
-directory names with architectural names (Ia32, Ipf, X64 and Ebc) do not
+directory names with architectural names (Ia32, X64 and Ebc) do not
 automatically cause the build tools or meta-data files to follow these
 alternate paths. Directories and Architectural Keywords are similar in name
 only.
@@ -315,11 +310,6 @@ evaluated, during the parsing of the file.
   DEFINE MDEMEM = $(MDE)/PeiMemoryAllocationLib
   MemoryAllocationLib|$(MDEMEM)/PeiMemoryAllocationLib.inf
 
-[LibraryClasses.IPF]
-  # Cannot use $(PERF) or $(MDEMEM)
-  # Can use $(MDE) from the common section
-  PalLib|$(MDE)/UefiPalLib/UefiPalLib.inf
-  TimerLib|$(MDE)/BaseTimerLibNullTemplate/BaseTimerLibNullTemplate.inf
 ```
 
 In the previous example, the directory and filename for a library instance is

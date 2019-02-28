@@ -1,7 +1,7 @@
 <!--- @file
   Appendix F Sample Binary INF Files
 
-  Copyright (c) 2007-2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -29,13 +29,13 @@
 
 -->
 
-# Appendix F Sample Binary INF Files
+# Appendix E Sample Binary INF Files
 
 The following are example INF files for the binary modules, EnhancedFatDxe, in
 the FatBinPkg. The second example is a generated binary INF file for the
 RuntimeDxe driver in the MdeModulePkg.
 
-## F.1 FatBinPkg/EnhancedFatDxe/Fat.inf
+## E.1 FatBinPkg/EnhancedFatDxe/Fat.inf
 
 ```ini
 ## @file
@@ -89,7 +89,7 @@ RuntimeDxe driver in the MdeModulePkg.
   PE32|Arm/Fat.efi|*
 ```
 
-## F.2 MdeModulePkg/Core/RuntimeDxe.inf
+## E.2 MdeModulePkg/Core/RuntimeDxe.inf
 
 ```ini
 ## @file

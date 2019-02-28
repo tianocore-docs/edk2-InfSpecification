@@ -1,7 +1,7 @@
 <!--- @file
   Appendix G Module Types
 
-  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -29,7 +29,7 @@
 
 -->
 
-# Appendix G Module Types
+# Appendix F Module Types
 
 ###### Table 9 EDK II Module Types
 

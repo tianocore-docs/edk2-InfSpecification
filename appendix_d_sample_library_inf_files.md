@@ -1,7 +1,7 @@
 <!--- @file
   Appendix E Sample Library INF Files
 
-  Copyright (c) 2007-2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -29,13 +29,13 @@
 
 -->
 
-# Appendix E Sample Library INF Files
+# Appendix D Sample Library INF Files
 
 The following INF file are examples of INF files for the EDK II MdePkg library,
 PeiServicesTablePointerLib and the MdeModulePkg libraries,
 DxeCoreMemoryAllocationLib.inf and SmmCorePerformanceLib.inf.
 
-## E.1 PeiServicesTablePointerLib.inf
+## D.1 PeiServicesTablePointerLib.inf
 
 ```ini
 ## @file
@@ -82,7 +82,7 @@ DxeCoreMemoryAllocationLib.inf and SmmCorePerformanceLib.inf.
   DebugLib
 ```
 
-## E.2 DxeCoreMemoryAllocationLib.inf
+## D.2 DxeCoreMemoryAllocationLib.inf
 
 ```ini
 ## @file
@@ -135,7 +135,7 @@ DxeCoreMemoryAllocationLib.inf and SmmCorePerformanceLib.inf.
   BaseMemoryLib
 ```
 
-## E.3 SmmCorePerformanceLib.inf
+## D.3 SmmCorePerformanceLib.inf
 
 ```ini
 ## @file
