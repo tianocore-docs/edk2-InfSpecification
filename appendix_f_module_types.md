@@ -1,5 +1,5 @@
 <!--- @file
-  Appendix G Module Types
+  Appendix F Module Types
 
   Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
 

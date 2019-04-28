@@ -86,7 +86,7 @@ this instance, the driver module would also specify the `LIBRARY_CLASS` in the
 the `BaseMemoryAllocation` class could specify the `DXE_CORE` INF file as the
 recommended instance for satisfying the required library class instance.
 
-Appendix G lists the available `MODULE_TYPE` values supported by EDK II INF
+Appendix F lists the available `MODULE_TYPE` values supported by EDK II INF
 files.
 
 The EDK II `[Defines]` section is common to all architectures and does not
