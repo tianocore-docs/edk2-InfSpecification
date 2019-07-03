@@ -72,8 +72,8 @@ Additionally, the rules for specifying DEPEX sections are as follows.
   `DXE_SMM_DRIVER` to generate an `SMM_DEPEX` section.
 
 * If the ModuleType is `SEC`, `UEFI_APPLICATION`, `UEFI_DRIVER`, `PEI_CORE`,
-  `SMM_CORE` or `DXE_CORE`, no `[Depex]` sections are permitted and all library
-  class `[Depex]` sections are ignored.
+  `SMM_CORE`, `DXE_CORE`, `HOST_APPLICATION`, no `[Depex]` sections are
+  permitted and all library class `[Depex]` sections are ignored.
 
 * Module types `PEIM`, `DXE_DRIVER`, `DXE_RUNTIME_DRIVER`, `DXE_SAL_DRIVER` and
   `DXE_SMM_DRIVER` require a `[Depex]` section unless the dependencies are

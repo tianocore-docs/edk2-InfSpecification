@@ -62,7 +62,8 @@ EBNF).
                  if (LIBRARY_CLASS is declared in Defines Section):
                    <Depex>*
                  elif (MODULE_TYPE == "USER_DEFINED"
-                       || MODULE_TYPE == "UEFI_DRIVER"):
+                       || MODULE_TYPE == "UEFI_DRIVER"
+                       || MODULE_TYPE == "HOST_APPLICATION"):
                           <Depex>*
                  elif (MODULE_TYPE == "PEIM"
                        || MODULE_TYPE == "DXE_DRIVER"
@@ -257,6 +258,7 @@ The following are common definitions used by multiple section types.
                           {"DXE_RUNTIME_DRIVER"} {"DXE_SAL_DRIVER"}
                           {"DXE_SMM_DRIVER"} {"UEFI_DRIVER"}
                           {"UEFI_APPLICATION"} {"USER_DEFINED"}
+                          {"HOST_APPLICATION"}
 <ModuleTypeList>      ::= <ModuleType> [" " <ModuleType>]*
 <IdentifierName>      ::= <TS> {<MACROVAL>} {<PcdName>} <TS>
 <Boolean>             ::= {<BoolType>} {<Expression>}

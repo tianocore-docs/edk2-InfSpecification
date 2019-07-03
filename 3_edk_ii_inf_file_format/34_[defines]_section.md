@@ -191,8 +191,10 @@ the `MODULE_UNI_FILE` entry must be a Unicode file with an extension of .uni,
 Drivers and applications are not allowed to have a `MODULE_TYPE` of `"BASE`".
 Only libraries are permitted to a have a `MODULE_TYPE` of `"BASE`". A INF file
 can be used to specify other binary files types, such as logo images or
-legacy16 option ROMs. The `USER_DEFINED` module type must be used in all cases
-where the module type is not a member of `<Edk2ModuleType>`.
+legacy16 option ROMs. `HOST_APPLICATION` module should be used to sepcify host
+application that can run in OS environment directly. The `USER_DEFINED` module type
+must be used in all cases where the module type is not a member of
+`<Edk2ModuleType>`.
 
 **_INF_VERSION_**
 

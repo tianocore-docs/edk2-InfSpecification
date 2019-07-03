@@ -120,9 +120,10 @@ section.
 
 If the module is not a library (no `LIBRARY_CLASS` in the `[Defines]` section)
 and the `MODULE_TYPE` is `SEC`, `SMM_CORE`, `DXE_CORE`, `PEI_CORE`,
-`UEFI_DRIVER` or `UEFI_APPLICATION` a Depex section is not permitted. If one is
-found, the build tools must exit gracefully and provide the user with an error
-message stating the `[Depex]` section is not valid for the `MODULE_TYPE`
+`UEFI_DRIVER`, `UEFI_APPLICATION` or `HOST_APPLICATION` a Depex section is
+not permitted. If one is found, the build tools must exit gracefully and
+provide the user with an error message stating the `[Depex]` section is not
+valid for the `MODULE_TYPE`
 
 If the module is a library (with a `LIBRARY_CLASS` statement in the `[Defines]`
 section) and there is no module type defined in Depex section's modifier and
