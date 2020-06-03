@@ -42,11 +42,16 @@ Defines the `[Packages]` section tag that is used in EDK II module INF files.
 Each entry in this section contains a directory name, forward slash character
 and the name of the DEC file contained in the directory name.
 
-Packages must be listed in the order that may be required for specifying
-include path statements for a compiler. For example, the _MdePkg/MdePkg.dec_
-file must be listed before the `MdeModulePkg/MdeModulePkg.dec` file. If there
-are PCDs listed in the generated "As Built" INF, the packages that declare any
-PCDs must be listed in this section.
+The order in which packages are listed may be relevant. Said order specifies in
+what order include path statements are generated for a compiler. This may help
+resolve header file name collisions between packages (although such collisions
+are normally not expected). For setting specific include path priorities, the
+packages may be listed in matching order in the INF file. Listing a package
+earlier will cause a compiler to consider include paths from that package
+earlier.
+
+If there are PCDs listed in the generated "As Built" INF, the packages that
+declare any PCDs must be listed in this section.
 
 Each package filename must be listed only once per section. Package filenames
 listed in architectural sections are not permitted to be listed in the common
