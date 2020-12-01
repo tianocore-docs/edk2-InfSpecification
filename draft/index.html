@@ -1,0 +1,1836 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>EDK II Module Information (INF) File Specification · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="1_introduction/" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./#edk-ii-module-information-inf-file-specification">
+            
+                    
+                    EDK II Module Information (INF) File Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1_introduction/">
+            
+                <a href="1_introduction/#1-introduction">
+            
+                    
+                    1 Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1_introduction/11_overview.html">
+            
+                <a href="1_introduction/11_overview.html#11-overview">
+            
+                    
+                    1.1 Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="1_introduction/12_terms.html">
+            
+                <a href="1_introduction/12_terms.html#12-terms">
+            
+                    
+                    1.2 Terms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="1_introduction/13_related_information.html">
+            
+                <a href="1_introduction/13_related_information.html#13-related-information">
+            
+                    
+                    1.3 Related Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="1_introduction/14_target_audience.html">
+            
+                <a href="1_introduction/14_target_audience.html#14-target-audience">
+            
+                    
+                    1.4 Target Audience
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="1_introduction/15_conventions_used_in_this_document.html">
+            
+                <a href="1_introduction/15_conventions_used_in_this_document.html#15-conventions-used-in-this-document">
+            
+                    
+                    1.5 Conventions Used in this Document
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2_inf_overview/">
+            
+                <a href="2_inf_overview/#2-inf-overview">
+            
+                    
+                    2 INF Overview
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="2_inf_overview/21_processing_overview.html">
+            
+                <a href="2_inf_overview/21_processing_overview.html#21-processing-overview">
+            
+                    
+                    2.1 Processing Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="2_inf_overview/22_information_file_general_rules.html">
+            
+                <a href="2_inf_overview/22_information_file_general_rules.html#22-information-file-general-rules">
+            
+                    
+                    2.2 Information File General Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="2_inf_overview/23_edk_ii_inf_format.html">
+            
+                <a href="2_inf_overview/23_edk_ii_inf_format.html#23-edk-ii-inf-format">
+            
+                    
+                    2.3 EDK II INF Format
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="2_inf_overview/24_[defines]_section.html">
+            
+                <a href="2_inf_overview/24_[defines]_section.html#24-defines-section">
+            
+                    
+                    2.4 [Defines] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="2_inf_overview/25_[sources]_section.html">
+            
+                <a href="2_inf_overview/25_[sources]_section.html#25-sources-section">
+            
+                    
+                    2.5 [Sources] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="2_inf_overview/26_[buildoptions]_section.html">
+            
+                <a href="2_inf_overview/26_[buildoptions]_section.html#26-buildoptions-section">
+            
+                    
+                    2.6 [BuildOptions] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="2_inf_overview/27_[binaries]_section.html">
+            
+                <a href="2_inf_overview/27_[binaries]_section.html#27-binaries-section">
+            
+                    
+                    2.7 [Binaries] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="2_inf_overview/28_[includes]_section.html">
+            
+                <a href="2_inf_overview/28_[includes]_section.html#28-includes-section">
+            
+                    
+                    2.8 [Includes] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="2_inf_overview/29_[protocols]_section.html">
+            
+                <a href="2_inf_overview/29_[protocols]_section.html#29-protocols-section">
+            
+                    
+                    2.9 [Protocols] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="2_inf_overview/210_[ppis]_section.html">
+            
+                <a href="2_inf_overview/210_[ppis]_section.html#210-ppis-section">
+            
+                    
+                    2.10 [Ppis] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="2_inf_overview/211_[guids]_section.html">
+            
+                <a href="2_inf_overview/211_[guids]_section.html#211-guids-section">
+            
+                    
+                    2.11 [Guids] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="2_inf_overview/212_[libraryclasses]_section.html">
+            
+                <a href="2_inf_overview/212_[libraryclasses]_section.html#212-libraryclasses-section">
+            
+                    
+                    2.12 [LibraryClasses] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="2_inf_overview/213_[packages]_section.html">
+            
+                <a href="2_inf_overview/213_[packages]_section.html#213-packages-section">
+            
+                    
+                    2.13 [Packages] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="2_inf_overview/214_pcd_sections.html">
+            
+                <a href="2_inf_overview/214_pcd_sections.html#214-pcd-sections">
+            
+                    
+                    2.14 PCD Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="2_inf_overview/215_[depex]_section.html">
+            
+                <a href="2_inf_overview/215_[depex]_section.html#215-depex-section">
+            
+                    
+                    2.15 [Depex] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="2_inf_overview/216_[userextensions]_section.html">
+            
+                <a href="2_inf_overview/216_[userextensions]_section.html#216-userextensions-section">
+            
+                    
+                    2.16 [UserExtensions] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="3_edk_ii_inf_file_format/">
+            
+                <a href="3_edk_ii_inf_file_format/#3-edk-ii-inf-file-format">
+            
+                    
+                    3 EDK II INF File Format
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="3_edk_ii_inf_file_format/31_general_rules.html">
+            
+                <a href="3_edk_ii_inf_file_format/31_general_rules.html#31-general-rules">
+            
+                    
+                    3.1 General Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="3_edk_ii_inf_file_format/32_component_inf_definition.html">
+            
+                <a href="3_edk_ii_inf_file_format/32_component_inf_definition.html#32-component-inf-definition">
+            
+                    
+                    3.2 Component INF Definition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="3_edk_ii_inf_file_format/33_header_section.html">
+            
+                <a href="3_edk_ii_inf_file_format/33_header_section.html#33-header-section">
+            
+                    
+                    3.3 Header Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="3_edk_ii_inf_file_format/34_[defines]_section.html">
+            
+                <a href="3_edk_ii_inf_file_format/34_[defines]_section.html#34-defines-section">
+            
+                    
+                    3.4 [Defines] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="3_edk_ii_inf_file_format/35_[buildoptions]_sections.html">
+            
+                <a href="3_edk_ii_inf_file_format/35_[buildoptions]_sections.html#35-buildoptions-sections">
+            
+                    
+                    3.5 [BuildOptions] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="3_edk_ii_inf_file_format/36_[libraryclasses]_sections.html">
+            
+                <a href="3_edk_ii_inf_file_format/36_[libraryclasses]_sections.html#36-libraryclasses-sections">
+            
+                    
+                    3.6 [LibraryClasses] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="3_edk_ii_inf_file_format/37_[packages]_sections.html">
+            
+                <a href="3_edk_ii_inf_file_format/37_[packages]_sections.html#37-packages-sections">
+            
+                    
+                    3.7 [Packages] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="3_edk_ii_inf_file_format/38_pcd_sections.html">
+            
+                <a href="3_edk_ii_inf_file_format/38_pcd_sections.html#38-pcd-sections">
+            
+                    
+                    3.8 PCD Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="3_edk_ii_inf_file_format/39_[sources]_sections.html">
+            
+                <a href="3_edk_ii_inf_file_format/39_[sources]_sections.html#39-sources-sections">
+            
+                    
+                    3.9 [Sources] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="3_edk_ii_inf_file_format/310_[userextensions]_sections.html">
+            
+                <a href="3_edk_ii_inf_file_format/310_[userextensions]_sections.html#310-userextensions-sections">
+            
+                    
+                    3.10 [UserExtensions] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="3_edk_ii_inf_file_format/311_[protocols]_sections.html">
+            
+                <a href="3_edk_ii_inf_file_format/311_[protocols]_sections.html#311-protocols-sections">
+            
+                    
+                    3.11 [Protocols] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="3_edk_ii_inf_file_format/312_[ppis]_sections.html">
+            
+                <a href="3_edk_ii_inf_file_format/312_[ppis]_sections.html#312-ppis-sections">
+            
+                    
+                    3.12 [Ppis] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="3_edk_ii_inf_file_format/313_[guids]_sections.html">
+            
+                <a href="3_edk_ii_inf_file_format/313_[guids]_sections.html#313-guids-sections">
+            
+                    
+                    3.13 [Guids] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="3_edk_ii_inf_file_format/314_[depex]_sections.html">
+            
+                <a href="3_edk_ii_inf_file_format/314_[depex]_sections.html#314-depex-sections">
+            
+                    
+                    3.14 [Depex] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="3_edk_ii_inf_file_format/315_[binaries]_section.html">
+            
+                <a href="3_edk_ii_inf_file_format/315_[binaries]_section.html#315-binaries-section">
+            
+                    
+                    3.15 [Binaries] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="appendix_a_build_changes_and_customizations.html">
+            
+                <a href="appendix_a_build_changes_and_customizations.html#appendix-a-build-changes-and-customizations">
+            
+                    
+                    Appendix A Build Changes and Customizations
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="appendix_a_build_changes_and_customizations.html">
+            
+                <a href="appendix_a_build_changes_and_customizations.html#a1-customizing-edk-compilation-for-a-component">
+            
+                    
+                    A.1 Customizing EDK Compilation for a Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="appendix_a_build_changes_and_customizations.html">
+            
+                <a href="appendix_a_build_changes_and_customizations.html#a2-changing-files-in-an-edk-library">
+            
+                    
+                    A.2 Changing Files in an EDK Library
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="appendix_a_build_changes_and_customizations.html">
+            
+                <a href="appendix_a_build_changes_and_customizations.html#a3-customizing-edk-ii-compilation-for-a-module-common-definitions">
+            
+                    
+                    A.3 Customizing EDK II Compilation for a Module Common Definitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="appendix_b_symbols.html">
+            
+                <a href="appendix_b_symbols.html#appendix-b-symbols">
+            
+                    
+                    Appendix B Symbols
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="appendix_c_sample_driver_inf_files.html">
+            
+                <a href="appendix_c_sample_driver_inf_files.html#appendix-c-sample-driver-inf-files">
+            
+                    
+                    Appendix C Sample Driver INF Files
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="appendix_c_sample_driver_inf_files.html">
+            
+                <a href="appendix_c_sample_driver_inf_files.html#c1-diskiodxe-inf-file">
+            
+                    
+                    C.1 DiskIoDxe INF file
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="appendix_c_sample_driver_inf_files.html">
+            
+                <a href="appendix_c_sample_driver_inf_files.html#c2-statuscoderuntimedxe-inf-file">
+            
+                    
+                    C.2 StatusCodeRuntimeDxe INF file
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="appendix_d_sample_library_inf_files.html">
+            
+                <a href="appendix_d_sample_library_inf_files.html#appendix-d-sample-library-inf-files">
+            
+                    
+                    Appendix D Sample Library INF Files
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="appendix_d_sample_library_inf_files.html">
+            
+                <a href="appendix_d_sample_library_inf_files.html#d1-peiservicestablepointerlibinf">
+            
+                    
+                    D.1 PeiServicesTablePointerLib.inf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="appendix_d_sample_library_inf_files.html">
+            
+                <a href="appendix_d_sample_library_inf_files.html#d2-dxecorememoryallocationlibinf">
+            
+                    
+                    D.2 DxeCoreMemoryAllocationLib.inf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="appendix_d_sample_library_inf_files.html">
+            
+                <a href="appendix_d_sample_library_inf_files.html#d3-smmcoreperformancelibinf">
+            
+                    
+                    D.3 SmmCorePerformanceLib.inf
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="appendix_e_sample_binary_inf_files.html">
+            
+                <a href="appendix_e_sample_binary_inf_files.html#appendix-e-sample-binary-inf-files">
+            
+                    
+                    Appendix E Sample Binary INF Files
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="appendix_e_sample_binary_inf_files.html">
+            
+                <a href="appendix_e_sample_binary_inf_files.html#e1-fatbinpkgenhancedfatdxefatinf">
+            
+                    
+                    E.1 FatBinPkg/EnhancedFatDxe/Fat.inf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="appendix_e_sample_binary_inf_files.html">
+            
+                <a href="appendix_e_sample_binary_inf_files.html#e2-mdemodulepkgcoreruntimedxeinf">
+            
+                    
+                    E.2 MdeModulePkg/Core/RuntimeDxe.inf
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="appendix_f_module_types.html">
+            
+                <a href="appendix_f_module_types.html#appendix-f-module-types">
+            
+                    
+                    Appendix F Module Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Tables
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="2_inf_overview/24_[defines]_section.html">
+            
+                <a href="2_inf_overview/24_[defines]_section.html#table-1-edk-ii-defines-section-elements">
+            
+                    
+                    Table 1 EDK II [Defines] Section Elements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="2_inf_overview/26_[buildoptions]_section.html">
+            
+                <a href="2_inf_overview/26_[buildoptions]_section.html#table-2-edk-ii-buildoptions-section-elements">
+            
+                    
+                    Table 2 EDK II [BuildOptions] Section Elements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="2_inf_overview/26_[buildoptions]_section.html">
+            
+                <a href="2_inf_overview/26_[buildoptions]_section.html#table-3-edk-ii-buildoptions-variable-descriptions">
+            
+                    
+                    Table 3 EDK II [BuildOptions] Variable Descriptions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="3_edk_ii_inf_file_format/32_component_inf_definition.html">
+            
+                <a href="3_edk_ii_inf_file_format/32_component_inf_definition.html#table-4-macro-usages">
+            
+                    
+                    Table 4 Macro Usages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="3_edk_ii_inf_file_format/35_[buildoptions]_sections.html">
+            
+                <a href="3_edk_ii_inf_file_format/35_[buildoptions]_sections.html#table-5-predefined-command-codes">
+            
+                    
+                    Table 5 Predefined Command Codes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="appendix_a_edk_inf_file_specification/a1_design_discussion.html">
+            
+                <a href="appendix_a_edk_inf_file_specification/a1_design_discussion.html#table-6-edk-defines-section-elements">
+            
+                    
+                    Table 6 EDK [defines] Section Elements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="appendix_a_edk_inf_file_specification/a1_design_discussion.html">
+            
+                <a href="appendix_a_edk_inf_file_specification/a1_design_discussion.html#table-7-edk-component-module-output-file-extensions">
+            
+                    
+                    Table 7 EDK Component (module) Output File Extensions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="appendix_c_symbols.html">
+            
+                <a href="appendix_c_symbols.html#table-8-symbol-description">
+            
+                    
+                    Table 8 Symbol Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="appendix_g_module_types.html">
+            
+                <a href="appendix_g_module_types.html#table-9-edk-ii-module-types">
+            
+                    
+                    Table 9 EDK II Module Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="appendix_g_module_types.html">
+            
+                <a href="appendix_g_module_types.html#table-10-module-type-to-component-type-mapping">
+            
+                    
+                    Table 10 Module Type to Component Type Mapping
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >EDK II Module Information (INF) File Specification</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Module Information (INF) File Specification</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/01/2020 05:25:34]</div>
+        <div style="text-align:right">Revision 1.26</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  README.md for EDK II Module Information (INF) File Specification
+
+  Copyright (c) 2007-2019, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<p><img src="media/TianocoreTitlePageLogo.jpg" width="300"></p>
+<h3 id="edk-ii-module-information-inf-file-specification">EDK II Module Information (INF) File Specification</h3>
+<p><strong> DRAFT FOR REVIEW </strong></p>
+<p><strong> 12/01/2020 05:25:34 </strong></p>
+<h3 id="acknowledgements">Acknowledgements</h3>
+<p>Redistribution and use in source (original document form) and &apos;compiled&apos;
+forms (converted to PDF, epub, HTML and other formats) with or without
+modification, are permitted provided that the following conditions are met:</p>
+<ol>
+<li><p>Redistributions of source code (original document form) must retain the
+above copyright notice, this list of conditions and the following
+disclaimer as the first lines of this file unmodified.</p>
+</li>
+<li><p>Redistributions in compiled form (transformed to other DTDs, converted to
+PDF, epub, HTML and other formats) must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.</p>
+</li>
+</ol>
+<p>THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT &quot;AS IS&quot; AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+<p>Copyright (c) 2007-2017, Intel Corporation. All rights reserved.</p>
+<h3 id="revision-history">Revision History</h3>
+<table>
+<thead>
+<tr>
+<th>Revision</th>
+<th>Revision History</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>Initial release.</td>
+<td>December 2007</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>Updated based on errata</td>
+<td>August 2008</td>
+</tr>
+<tr>
+<td>1,2</td>
+<td>Updated based on enhancement requests</td>
+<td>June 2009</td>
+</tr>
+<tr>
+<td>1.21</td>
+<td>Updated to support UEFI 2.3 and PI 1.2 specifications</td>
+<td>March 2010</td>
+</tr>
+<tr>
+<td></td>
+<td>Added new element, UEFI_HII_RESOURCE_SECTION to [Defines] section</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added new SMM_CORE module type</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Updated for clarification</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Permit NULL values in place of PCD default values</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Updated to correct items listed in the errata document</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Permit whitespace characters between token elements</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Fixed BuildOptions separator between Family and the tool change information to match the &quot;:&apos; implementation</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Changes to appearance for readability</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Moved EDK INF description from sections 2 and 3 to an Appendix</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>User feature requests:</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Updated the description of the FeatureFlag Expression for all occurrences in Chapter 3 to be either a Shell style or a C style expression.</td>
+<td></td>
+</tr>
+<tr>
+<td>1.22</td>
+<td>Grammatical and formatting changes.</td>
+<td>May 2010</td>
+</tr>
+<tr>
+<td>1.22 w/</td>
+<td>Updates:</td>
+<td>December 2011</td>
+</tr>
+<tr>
+<td>Errata A</td>
+<td>Updated to support UEFI version 2.3.1 and updated spec release dates in Introduction</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Clarify UEFI&apos;s PI Distribution Package Specification</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Standardize Common data definitions for all specifications</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Grammatical, formatting and spelling changes</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Replaced &quot;should&quot; with wording saying that it is</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>&quot;recommended&quot;</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added PCI_COMPRESS definition in [Defines] section</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added the DPX_SOURCE statement back into the [Defines] section</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added VALID_ARCHITECTURES comment definition</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>back to the [Defines] section to formalize this comment which may be used by tools. This had been removed from the 1.22 spec as it was assumed that tools could determine valid architectures (other than ALL architectures) by the use of architectural modifiers in section tags.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Removed restriction about comments in the DPX_SOURCE file - C style comments are allowed</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Updated DEPEX content for USER_DEFINED module types</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Removed EDK content from EBNF in Chapter 3, as this chapter only describes the content for EDK II INF files; for clarity, moved EDK content from descriptions in Chapter 2 to Appendix A</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added EBNF for <code>&lt;Extension&gt;</code></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added rules for how macros can be shared between sections</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Update the EBNF for paths so that a macro can have a path that does not end with a file separator; also allow using a path and filename as a macro value; clarify that macros are only expanded in the EDK II INF files, never evaluated during the initial parsing of the file</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Removed duplicate content and added the scoping rules for Macros, clarified MACRO summary; made the value optional so that a C flag macro can be specified without a value; require the &quot;=&quot; in a macro DEFINE statement</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Removed references to system environment variables in the Macros section and removed table</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Revised EBNF for PCD sections to allow more precise definitions</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Specify how PCD values are obtained</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Changed definition of a C Array to ensure that an empty array is not specified</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Allow any non-zero value to be TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Use separate EBNF for each PCD datum type, also explain the PCD usages; describe, in section 2, what sections are valid for binary only modules, and what sections are prohibited in binary only modules</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Clarify that C data arrays must be byte arrays for PCD value fields; both C format and registry format GUID structures are not permitted in VOID* PCD value fields</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>The # character is optional for the header comment block in EDK INF files</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Prohibit specifying something an a common section and in an architecturally specific section (something that is architecture specific cannot be common to all architectures)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Removed FFE from entries as they have no meaning, nothing changes - build does not break if they are there</td>
+<td></td>
+</tr>
+<tr>
+<td>1.22 w/</td>
+<td>Updates:</td>
+<td>June 2012</td>
+</tr>
+<tr>
+<td>Errata B</td>
+<td>Section 1.3, page 5, Updated specs definition to include released errata</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Section 3.8, page 67, Removed Value field for DynamicEx PCDs listed in a generated &quot;As Built&quot; INF file</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Appendix F, page 120, Replaced invalid &quot;FW&quot; with &quot;PE32&quot; for file type of the binary image</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Section 2.7, pages 25 &amp; 26, Clarified binary file types are leaf sections, removed LIB, as EDK II build system does not support distribution of binary libraries</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Section 2.7, page 25, Removed GUID encapsulation section keyword from the <code>[Binaries]</code> section</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>&lt;FileType&gt;</code> definition - the binary file must be a leaf file type</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Section 3.2, page 37, require <code>&lt;Depex&gt;</code> sections for <code>PEIM</code>,</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>DXE_DRIVER</code>, <code>DXE_RUNTIME_DRIVER</code>,</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>DXE_SAL_DRIVER</code> and <code>DXE_SMM_DRIVER</code></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Table 3, page 23 and Section 3.5, page 60, Removed references to <code>build_rule.txt</code> - this file is used by tools, no user editing is required</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Section 3.15, page 84 &amp; 85, Separated out the</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>SUBTYPE_GUID</code> entry in the <code>[Binaries]</code> section <code>&lt;FileType&gt;</code> definition, as this entry requires a GUID value - also, added text to only allow unique</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>SUBTYPE_GUID</code> <code>&lt;GuidValue&gt;</code> pairs per section</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Section 3.2.1, pages 44 &amp; 45, Fixed the DOS <code>&lt;EOL&gt;</code> character sequence</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Section 3.11, page 76, Clarify what goes into a generated Binary INF file for Protocols</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added a generated binary INF in Appendix F</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Cleanup of tables in Appendix G</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Updated Example INF files in Appendix D and Appendix E</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Section 3.4 Added description of ENTRY_POINT and</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>UNLOAD_IMAGE elements in the <code>[Defines]</code> section</td>
+<td></td>
+</tr>
+<tr>
+<td>1.22 w/</td>
+<td>Updates:</td>
+<td>August 2013</td>
+</tr>
+<tr>
+<td>Errata C</td>
+<td>Section 1.3, updated UDP - Errata version of the UEFI/PI Distribution Package Spec.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Section 2.7 and 3.15, added a binary file type of</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>DISPOSABLE</code> which will not be processed by the EDK II tools.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Section 3.6, 3.8, clarify that the &quot;As Built&quot; INF file is always generated by the build system</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Section 3.7, clarify that this section is required to list all dependent packages for PCDs listed in an &quot;As Built&quot; INF file</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Section 3.8, clarify the types of PCDs that will be generated in &quot;As Built&quot; INF files</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Section 3.3 Added Doxygen tags for Binary Header, Copyright from the Source INF file, containing the date of the last functional update to the source files is also the date that should be used for a Binary &quot;As Built&quot; INF file</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Put the <code>BUILD_NUMBER</code> element back into the</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>[Defines] section; this was inadvertently removed in Errata A</code></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Clarify that all entries are required within a Binary Header section.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Prohibit FeatureFlagExpressions for PCDs, GUIDs, Protocols and PPIs in the generated &quot;As Built&quot; INF files.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Fixed CRLF to be the correct hex bytes.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Reformatted the Header EBNF</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Removed unused EBNF entry, <code>&lt;ValPcds&gt;</code></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added Reference to EDK II Build Specification for PCD processing rules.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Remove sentences referring to lengths of PCD VOID* entries in section 2.14</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Clarify that the Unicode format files are UCS-2LE encoded.</td>
+<td></td>
+</tr>
+<tr>
+<td>1.22 w/</td>
+<td>Updates:</td>
+<td>March 2014</td>
+</tr>
+<tr>
+<td>Errata D</td>
+<td>Clarified that only [UserExtensions] sections with a UserId of TianoCore will be copied into the As Built INF generated by the EDK II build tools.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Clarify that [Depex] section tags must be unique.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Clarify the use of [Depex] sections in library modules.</td>
+<td></td>
+</tr>
+<tr>
+<td>1.24</td>
+<td>Updates:</td>
+<td>August 2014</td>
+</tr>
+<tr>
+<td></td>
+<td>Change revision number of this specification from 1.22 to</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>1.24</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Update <code>INF_VERSION</code> to <code>0x00010017</code></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added <code>MODULE_UNI_FILE</code> entry to the <code>[Defines]</code> section; this file must end with an extension of .uni, .UNI or .Uni</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added reserved <code>TianoCore</code> user extension for</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>&quot;ExtraFiles&quot;</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Allow Space and Unicode characters in the directory path identified by the system environment variable,</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>WORKSPACE</code></td>
+<td></td>
+</tr>
+<tr>
+<td>1.24 w/</td>
+<td>Updates:</td>
+<td>December 2014</td>
+</tr>
+<tr>
+<td>Errata A</td>
+<td>Revised ordering of the top level EBNF for an INF file to match the output of the Intel(R) UEFI Distribution Packaging Tool at the start of chapter 3.2</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Updated specification dates in section 1.2 and added two new specs</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Updated INF_VERSION to 0x00010018</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Allow specifying the INF_VERSION value as a decimal value, such as 1.24.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Modified Section 2.14, allowing Feature Flag Expressions, removed expression syntax from the Common EBNF as it is now covered by its own specification.</td>
+<td></td>
+</tr>
+<tr>
+<td>1.24 w/</td>
+<td>Updates:</td>
+<td>March 2015</td>
+</tr>
+<tr>
+<td>Errata B</td>
+<td>Update link to the EDK II Specifications, fixed the name of the Multi-String .UNI File Format Specification</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Update usage, UNDEFINED, in Parameters sections for Guids, Protocols, PPIs and PCDs in chapter 3</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Add clarification of the Event Types in chapter 3</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added UEFI PI PEI Boot Mode declarations in 3.2.5 to the list while keeping the synonyms that were already defined. Added descriptions as well.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Adding HOB type, UNUSED from the PI Specification</td>
+<td></td>
+</tr>
+<tr>
+<td>1.24 w/</td>
+<td>Updates:</td>
+<td>August 2015</td>
+</tr>
+<tr>
+<td>Errata C</td>
+<td>Enable Feature Flag Expressions for entries in the INF file for Protocols, PPIs, GUID and PCD entries</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Updated other sections to specify how the build system will evaluate the Feature Flag Expression</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Prohibit using #include statements in UNI files specified in the MODULE_UNI_FILE entry</td>
+<td></td>
+</tr>
+<tr>
+<td>1.25</td>
+<td>Revised WORKSPACE wording for updated build system that can handle packages located outside of the WORKSPACE directory tree (refer to the TianoCore.org/EDKII website for additional instructions on setting up a development environment).</td>
+<td>January 2016</td>
+</tr>
+<tr>
+<td>1.26</td>
+<td>Convert to GitBooks</td>
+<td>May 2017</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://bugzilla.tianocore.org/show_bug.cgi?id=463" target="_blank">#463</a> INF spec: document the LIB file type under the [Binaries] Section</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://bugzilla.tianocore.org/show_bug.cgi?id=548" target="_blank">#548</a> [INF spec] INF [LibraryClasses] section should not support ModuleType</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://bugzilla.tianocore.org/show_bug.cgi?id=522" target="_blank">#522</a> INF spec: add the clarification that PCD value may from build command</td>
+<td></td>
+</tr>
+<tr>
+<td>1.27</td>
+<td>Update version to 1.27</td>
+<td>Mar 2018</td>
+</tr>
+<tr>
+<td></td>
+<td>Add Flexible PCD value format support</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Add clarification that !error statement is not permitted in INF file</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>INF Spec: FixedAtBuild (VOID*) PCD use in the [DEPEX] section</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://bugzilla.tianocore.org/show_bug.cgi?id=1162" target="_blank">#1162</a> Correct the item in Table 1 to align with 3.4 section</td>
+<td></td>
+</tr>
+<tr>
+<td>1.28</td>
+<td><a href="https://bugzilla.tianocore.org/show_bug.cgi?id=1453" target="_blank">#1453</a> Update INF spec to remove EDK related contents</td>
+<td>Mar 2019</td>
+</tr>
+<tr>
+<td>1.29</td>
+<td><a href="https://bugzilla.tianocore.org/show_bug.cgi?id=1952" target="_blank">#1952</a> Add new MODULE_TYPE HOST_APPLICATION</td>
+<td>July 2019</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Module Information (INF) File Specification</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/01/2020 05:25:34]</div>
+        <div style="text-align:right">Revision 1.26</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                
+                <a href="1_introduction/#1-introduction" class="navigation navigation-next navigation-unique" aria-label="Next page: 1 Introduction">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"EDK II Module Information (INF) File Specification","level":"1.1","depth":1,"next":{"title":"1 Introduction","level":"1.2","depth":1,"anchor":"#1-introduction","path":"1_introduction/README.md","ref":"1_introduction/README.md#1-introduction","articles":[{"title":"1.1 Overview","level":"1.2.1","depth":2,"anchor":"#11-overview","path":"1_introduction/11_overview.md","ref":"1_introduction/11_overview.md#11-overview","articles":[]},{"title":"1.2 Terms","level":"1.2.2","depth":2,"anchor":"#12-terms","path":"1_introduction/12_terms.md","ref":"1_introduction/12_terms.md#12-terms","articles":[]},{"title":"1.3 Related Information","level":"1.2.3","depth":2,"anchor":"#13-related-information","path":"1_introduction/13_related_information.md","ref":"1_introduction/13_related_information.md#13-related-information","articles":[]},{"title":"1.4 Target Audience","level":"1.2.4","depth":2,"anchor":"#14-target-audience","path":"1_introduction/14_target_audience.md","ref":"1_introduction/14_target_audience.md#14-target-audience","articles":[]},{"title":"1.5 Conventions Used in this Document","level":"1.2.5","depth":2,"anchor":"#15-conventions-used-in-this-document","path":"1_introduction/15_conventions_used_in_this_document.md","ref":"1_introduction/15_conventions_used_in_this_document.md#15-conventions-used-in-this-document","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II Module Information (INF) File Specification","version":"Revision 1.26"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2020-12-01T05:25:03.785Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T05:25:34.729Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
