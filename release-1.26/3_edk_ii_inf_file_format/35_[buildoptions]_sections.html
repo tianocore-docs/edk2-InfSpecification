@@ -1,0 +1,1468 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.5 [BuildOptions] Sections · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="36_[libraryclasses]_sections.html" />
+    
+    
+    <link rel="prev" href="34_[defines]_section.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../#edk-ii-module-information-inf-file-specification">
+            
+                    
+                    EDK II Module Information (INF) File Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1_introduction/">
+            
+                <a href="../1_introduction/#1-introduction">
+            
+                    
+                    1 Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1_introduction/11_overview.html">
+            
+                <a href="../1_introduction/11_overview.html#11-overview">
+            
+                    
+                    1.1 Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1_introduction/12_terms.html">
+            
+                <a href="../1_introduction/12_terms.html#12-terms">
+            
+                    
+                    1.2 Terms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../1_introduction/13_related_information.html">
+            
+                <a href="../1_introduction/13_related_information.html#13-related-information">
+            
+                    
+                    1.3 Related Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../1_introduction/14_target_audience.html">
+            
+                <a href="../1_introduction/14_target_audience.html#14-target-audience">
+            
+                    
+                    1.4 Target Audience
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../1_introduction/15_conventions_used_in_this_document.html">
+            
+                <a href="../1_introduction/15_conventions_used_in_this_document.html#15-conventions-used-in-this-document">
+            
+                    
+                    1.5 Conventions Used in this Document
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2_inf_overview/">
+            
+                <a href="../2_inf_overview/#2-inf-overview">
+            
+                    
+                    2 INF Overview
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2_inf_overview/21_processing_overview.html">
+            
+                <a href="../2_inf_overview/21_processing_overview.html#21-processing-overview">
+            
+                    
+                    2.1 Processing Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2_inf_overview/22_information_file_general_rules.html">
+            
+                <a href="../2_inf_overview/22_information_file_general_rules.html#22-information-file-general-rules">
+            
+                    
+                    2.2 Information File General Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2_inf_overview/23_edk_ii_inf_format.html">
+            
+                <a href="../2_inf_overview/23_edk_ii_inf_format.html#23-edk-ii-inf-format">
+            
+                    
+                    2.3 EDK II INF Format
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../2_inf_overview/24_[defines]_section.html">
+            
+                <a href="../2_inf_overview/24_[defines]_section.html#24-defines-section">
+            
+                    
+                    2.4 [Defines] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../2_inf_overview/25_[sources]_section.html">
+            
+                <a href="../2_inf_overview/25_[sources]_section.html#25-sources-section">
+            
+                    
+                    2.5 [Sources] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../2_inf_overview/26_[buildoptions]_section.html">
+            
+                <a href="../2_inf_overview/26_[buildoptions]_section.html#26-buildoptions-section">
+            
+                    
+                    2.6 [BuildOptions] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../2_inf_overview/27_[binaries]_section.html">
+            
+                <a href="../2_inf_overview/27_[binaries]_section.html#27-binaries-section">
+            
+                    
+                    2.7 [Binaries] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../2_inf_overview/28_[includes]_section.html">
+            
+                <a href="../2_inf_overview/28_[includes]_section.html#28-includes-section">
+            
+                    
+                    2.8 [Includes] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../2_inf_overview/29_[protocols]_section.html">
+            
+                <a href="../2_inf_overview/29_[protocols]_section.html#29-protocols-section">
+            
+                    
+                    2.9 [Protocols] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../2_inf_overview/210_[ppis]_section.html">
+            
+                <a href="../2_inf_overview/210_[ppis]_section.html#210-ppis-section">
+            
+                    
+                    2.10 [Ppis] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../2_inf_overview/211_[guids]_section.html">
+            
+                <a href="../2_inf_overview/211_[guids]_section.html#211-guids-section">
+            
+                    
+                    2.11 [Guids] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../2_inf_overview/212_[libraryclasses]_section.html">
+            
+                <a href="../2_inf_overview/212_[libraryclasses]_section.html#212-libraryclasses-section">
+            
+                    
+                    2.12 [LibraryClasses] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../2_inf_overview/213_[packages]_section.html">
+            
+                <a href="../2_inf_overview/213_[packages]_section.html#213-packages-section">
+            
+                    
+                    2.13 [Packages] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../2_inf_overview/214_pcd_sections.html">
+            
+                <a href="../2_inf_overview/214_pcd_sections.html#214-pcd-sections">
+            
+                    
+                    2.14 PCD Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../2_inf_overview/215_[depex]_section.html">
+            
+                <a href="../2_inf_overview/215_[depex]_section.html#215-depex-section">
+            
+                    
+                    2.15 [Depex] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../2_inf_overview/216_[userextensions]_section.html">
+            
+                <a href="../2_inf_overview/216_[userextensions]_section.html#216-userextensions-section">
+            
+                    
+                    2.16 [UserExtensions] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./#3-edk-ii-inf-file-format">
+            
+                    
+                    3 EDK II INF File Format
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="31_general_rules.html">
+            
+                <a href="31_general_rules.html#31-general-rules">
+            
+                    
+                    3.1 General Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="32_component_inf_definition.html">
+            
+                <a href="32_component_inf_definition.html#32-component-inf-definition">
+            
+                    
+                    3.2 Component INF Definition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="33_header_section.html">
+            
+                <a href="33_header_section.html#33-header-section">
+            
+                    
+                    3.3 Header Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="34_[defines]_section.html">
+            
+                <a href="34_[defines]_section.html#34-defines-section">
+            
+                    
+                    3.4 [Defines] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="35_[buildoptions]_sections.html">
+            
+                <a href="35_[buildoptions]_sections.html#35-buildoptions-sections">
+            
+                    
+                    3.5 [BuildOptions] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="36_[libraryclasses]_sections.html">
+            
+                <a href="36_[libraryclasses]_sections.html#36-libraryclasses-sections">
+            
+                    
+                    3.6 [LibraryClasses] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="37_[packages]_sections.html">
+            
+                <a href="37_[packages]_sections.html#37-packages-sections">
+            
+                    
+                    3.7 [Packages] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="38_pcd_sections.html">
+            
+                <a href="38_pcd_sections.html#38-pcd-sections">
+            
+                    
+                    3.8 PCD Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="39_[sources]_sections.html">
+            
+                <a href="39_[sources]_sections.html#39-sources-sections">
+            
+                    
+                    3.9 [Sources] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="310_[userextensions]_sections.html">
+            
+                <a href="310_[userextensions]_sections.html#310-userextensions-sections">
+            
+                    
+                    3.10 [UserExtensions] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="311_[protocols]_sections.html">
+            
+                <a href="311_[protocols]_sections.html#311-protocols-sections">
+            
+                    
+                    3.11 [Protocols] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="312_[ppis]_sections.html">
+            
+                <a href="312_[ppis]_sections.html#312-ppis-sections">
+            
+                    
+                    3.12 [Ppis] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="313_[guids]_sections.html">
+            
+                <a href="313_[guids]_sections.html#313-guids-sections">
+            
+                    
+                    3.13 [Guids] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="314_[depex]_sections.html">
+            
+                <a href="314_[depex]_sections.html#314-depex-sections">
+            
+                    
+                    3.14 [Depex] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="315_[binaries]_section.html">
+            
+                <a href="315_[binaries]_section.html#315-binaries-section">
+            
+                    
+                    3.15 [Binaries] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../appendix_a_edk_inf_file_specification/">
+            
+                <a href="../appendix_a_edk_inf_file_specification/#appendix-a-edk-inf-file-specification">
+            
+                    
+                    Appendix A EDK INF File Specification
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../appendix_a_edk_inf_file_specification/a1_design_discussion.html">
+            
+                <a href="../appendix_a_edk_inf_file_specification/a1_design_discussion.html#a1-design-discussion">
+            
+                    
+                    A.1 Design Discussion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../appendix_a_edk_inf_file_specification/a2_edk_file_specification.html">
+            
+                <a href="../appendix_a_edk_inf_file_specification/a2_edk_file_specification.html#a2-edk-file-specification">
+            
+                    
+                    A.2 EDK File Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../appendix_b_build_changes_and_customizations.html">
+            
+                <a href="../appendix_b_build_changes_and_customizations.html#appendix-b-build-changes-and-customizations">
+            
+                    
+                    Appendix B Build Changes and Customizations
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../appendix_b_build_changes_and_customizations.html">
+            
+                <a href="../appendix_b_build_changes_and_customizations.html#b1-customizing-edk-compilation-for-a-component">
+            
+                    
+                    B.1 Customizing EDK Compilation for a Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../appendix_b_build_changes_and_customizations.html">
+            
+                <a href="../appendix_b_build_changes_and_customizations.html#b2-changing-files-in-an-edk-library">
+            
+                    
+                    B.2 Changing Files in an EDK Library
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../appendix_b_build_changes_and_customizations.html">
+            
+                <a href="../appendix_b_build_changes_and_customizations.html#b3-customizing-edk-ii-compilation-for-a-module-common-definitions">
+            
+                    
+                    B.3 Customizing EDK II Compilation for a Module Common Definitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../appendix_c_symbols.html">
+            
+                <a href="../appendix_c_symbols.html#appendix-c-symbols">
+            
+                    
+                    Appendix C Symbols
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../appendix_d_sample_driver_inf_files.html">
+            
+                <a href="../appendix_d_sample_driver_inf_files.html#appendix-d-sample-driver-inf-files">
+            
+                    
+                    Appendix D Sample Driver INF Files
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../appendix_d_sample_driver_inf_files.html">
+            
+                <a href="../appendix_d_sample_driver_inf_files.html#d1-diskiodxe-inf-file">
+            
+                    
+                    D.1 DiskIoDxe INF file
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../appendix_d_sample_driver_inf_files.html">
+            
+                <a href="../appendix_d_sample_driver_inf_files.html#d2-statuscoderuntimedxe-inf-file">
+            
+                    
+                    D.2 StatusCodeRuntimeDxe INF file
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../appendix_e_sample_library_inf_files.html">
+            
+                <a href="../appendix_e_sample_library_inf_files.html#appendix-e-sample-library-inf-files">
+            
+                    
+                    Appendix E Sample Library INF Files
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../appendix_e_sample_library_inf_files.html">
+            
+                <a href="../appendix_e_sample_library_inf_files.html#e1-peiservicestablepointerlibinf">
+            
+                    
+                    E.1 PeiServicesTablePointerLib.inf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../appendix_e_sample_library_inf_files.html">
+            
+                <a href="../appendix_e_sample_library_inf_files.html#e2-dxecorememoryallocationlibinf">
+            
+                    
+                    E.2 DxeCoreMemoryAllocationLib.inf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../appendix_e_sample_library_inf_files.html">
+            
+                <a href="../appendix_e_sample_library_inf_files.html#e3-smmcoreperformancelibinf">
+            
+                    
+                    E.3 SmmCorePerformanceLib.inf
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../appendix_f_sample_binary_inf_files.html">
+            
+                <a href="../appendix_f_sample_binary_inf_files.html#appendix-f-sample-binary-inf-files">
+            
+                    
+                    Appendix F Sample Binary INF Files
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../appendix_f_sample_binary_inf_files.html">
+            
+                <a href="../appendix_f_sample_binary_inf_files.html#f1-fatbinpkgenhancedfatdxefatinf">
+            
+                    
+                    F.1 FatBinPkg/EnhancedFatDxe/Fat.inf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../appendix_f_sample_binary_inf_files.html">
+            
+                <a href="../appendix_f_sample_binary_inf_files.html#f2-mdemodulepkgcoreruntimedxeinf">
+            
+                    
+                    F.2 MdeModulePkg/Core/RuntimeDxe.inf
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../appendix_g_module_types.html">
+            
+                <a href="../appendix_g_module_types.html#appendix-g-module-types">
+            
+                    
+                    Appendix G Module Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Tables
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../2_inf_overview/24_[defines]_section.html">
+            
+                <a href="../2_inf_overview/24_[defines]_section.html#table-1-edk-ii-defines-section-elements">
+            
+                    
+                    Table 1 EDK II [Defines] Section Elements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../2_inf_overview/26_[buildoptions]_section.html">
+            
+                <a href="../2_inf_overview/26_[buildoptions]_section.html#table-2-edk-ii-buildoptions-section-elements">
+            
+                    
+                    Table 2 EDK II [BuildOptions] Section Elements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../2_inf_overview/26_[buildoptions]_section.html">
+            
+                <a href="../2_inf_overview/26_[buildoptions]_section.html#table-3-edk-ii-buildoptions-variable-descriptions">
+            
+                    
+                    Table 3 EDK II [BuildOptions] Variable Descriptions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="32_component_inf_definition.html">
+            
+                <a href="32_component_inf_definition.html#table-4-macro-usages">
+            
+                    
+                    Table 4 Macro Usages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="35_[buildoptions]_sections.html">
+            
+                <a href="35_[buildoptions]_sections.html#table-5-predefined-command-codes">
+            
+                    
+                    Table 5 Predefined Command Codes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../appendix_a_edk_inf_file_specification/a1_design_discussion.html">
+            
+                <a href="../appendix_a_edk_inf_file_specification/a1_design_discussion.html#table-6-edk-defines-section-elements">
+            
+                    
+                    Table 6 EDK [defines] Section Elements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../appendix_a_edk_inf_file_specification/a1_design_discussion.html">
+            
+                <a href="../appendix_a_edk_inf_file_specification/a1_design_discussion.html#table-7-edk-component-module-output-file-extensions">
+            
+                    
+                    Table 7 EDK Component (module) Output File Extensions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../appendix_c_symbols.html">
+            
+                <a href="../appendix_c_symbols.html#table-8-symbol-description">
+            
+                    
+                    Table 8 Symbol Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="../appendix_g_module_types.html">
+            
+                <a href="../appendix_g_module_types.html#table-9-edk-ii-module-types">
+            
+                    
+                    Table 9 EDK II Module Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="../appendix_g_module_types.html">
+            
+                <a href="../appendix_g_module_types.html#table-10-module-type-to-component-type-mapping">
+            
+                    
+                    Table 10 Module Type to Component Type Mapping
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.5 [BuildOptions] Sections</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Module Information (INF) File Specification</div>
+        <div style="text-align:right">Revision 1.26</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  3.5 [BuildOptions] Sections
+
+  Copyright (c) 2007-2017, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h2 id="35-buildoptions-sections">3.5 [BuildOptions] Sections</h2>
+<p>These sections are optional for EDK II INF files.</p>
+<h4 id="summary">Summary</h4>
+<p>Defines the <code>[BuildOptions]</code> section content. These sections are used to define
+the custom definitions for individual tools. There are two styles for options,
+a replacement of any previous definition (for this module only) of the flags or
+commands used (specified by the double &quot;==&quot; equal sign) to process the module
+code, or an append option, (specified by the single &quot;=&quot; equal sign) which
+will be appended to the previous definition. When the single &quot;=&quot; equal sign
+is used, the string to the left, is appended, typically used to override a
+single flag. When the double &quot;==&quot; sign is used, then any previous definition
+(reference build requires that it must be defined <code>tools_def.txt</code> file) will be
+cleared, and the left value replaces the entire previous definition.</p>
+<p>The double &quot;==&quot; equal sign must be used to replace a command (specified by
+the PATH attribute,) appending is not an option.</p>
+<p>For the DPATH attribute, can use either the replace or append, and is used to
+expand the system environment <code>PATH</code> variable prior to processing any commands.</p>
+<p>Other, user defined attributes, can be specified, in this section, using either
+the append or replace. Usage of these overrides is implementation specific.</p>
+<p>Macro use is permitted in the <code>[BuildOptions]</code> sections, and must follow the
+rule that Macros used in this section must be defined locally within the INF
+file; use of externally defined MACROs is prohibited. Additionally, a
+<code>$(MACRO)</code> that appears inside of a quoted string in R-Values (following an
+append &quot;=&quot; or replace &quot;==&quot;) is permitted, as parsing tools are not required
+to expand those macro values. Macros within quoted strings do not need to be
+defined locally.</p>
+<p>Macro statements, <code>$(MACRO)</code>, that are encapsulated in double quotation marks
+are not expanded, nor are they processed by parsing tools, as double quotation
+marks indicate a string that must be treated as a single entity. Macro
+statements in comments must also be ignored by parsing tools.</p>
+<p>Macros are not allowed on the left side of the assignment statement (left of
+the equal sign).</p>
+<p>The EDK II build system will provide an option to create an &quot;As Built&quot; INF file
+that can be used for binary distributions. This section will be completed,
+listing all of the option flags for every application that was used to create
+the binary. Since these &quot;As Built&quot; flags are within comment sections, the
+actual flag string can be extended to a new comment line without using the line
+extension character.</p>
+<p>Tools that create &quot;As Built&quot; information must expand any macro values used by
+the tools during the module build. The standard Macro Definitions are not
+permitted within this section for an &quot;As Built&quot; INF file.</p>
+<p>Build options listed in architectural sections will be appended to build
+options listed in the common architectural section.</p>
+<p>Comments in this section must appear on a separate line, they may not be
+appended after statements.</p>
+<p>The &quot;common&quot; architecture modifier in a section tag must not be combined with
+other architecture type; doing so will result in a build break.</p>
+<h4 id="prototype">Prototype</h4>
+<pre><code class="lang-c">&lt;BuildOptions&gt;  ::= &quot;[BuildOptions&quot; [&lt;com_attrs&gt;] &quot;]&quot; &lt;EOL&gt; &lt;BuildStmts&gt;
+&lt;com_attrs&gt;     ::= {&quot;.common&quot;} {&lt;attrs&gt;}
+&lt;attrs&gt;         ::= &lt;Archs&gt; [&quot;,&quot; &lt;TS&gt; &quot;BuildOptions&quot; &lt;attrs&gt;]*
+&lt;Archs&gt;         ::= &quot;.&quot; &lt;arch&gt;
+&lt;BuildStmts&gt;    ::= {&lt;BuildOptStmts&gt;*} {&lt;AsBuiltStmts&gt;}
+&lt;AsBuiltStmts&gt;  ::= &lt;TS&gt; &quot;##&quot; &lt;TS&gt; &quot;@AsBuilt&quot; &lt;EOL&gt; &lt;AsBuiltFfe&gt;*
+&lt;AsBuiltFfe&gt;    ::= &lt;TS&gt; &quot;##&quot; &lt;FamId&gt; &lt;ToolFlags&gt; &lt;Eq&gt; &lt;CFlags&gt; &lt;EOL&gt; [&lt;TS&gt; &quot;#&quot;
+                    &lt;CFlagsContd&gt; &lt;EOL&gt;]*
+&lt;CFlagsContd&gt;   ::= &lt;CFlags&gt;
+&lt;BuildOptStmts&gt; ::= {&lt;FlagExpr&gt;} {&lt;PathExpr&gt;} {&lt;CmdExpr&gt;} {&lt;Other&gt;}
+&lt;FamId&gt;         ::= &lt;Family&gt; &quot;:&quot;
+&lt;FlagExpr&gt;      ::= &lt;TS&gt; [&lt;FamId&gt;] &lt;ToolFlags&gt; &lt;Equal&gt; &lt;CFlags&gt; &lt;EOL&gt;
+&lt;PathExpr&gt;      ::= &lt;TS&gt; [&lt;FamId&gt;] &lt;ToolPath&gt; &lt;Equal&gt; &lt;PATH&gt; &lt;EOL&gt;
+&lt;CmdExpr&gt;       ::= &lt;TS&gt; [&lt;FamId&gt;] &lt;ToolCmd&gt; &lt;ReplaceEq&gt; &lt;PathCmd&gt; &lt;EOL&gt;
+&lt;Other&gt;         ::= {&lt;OtherTool&gt;} {&lt;MacroDefinition&gt;}
+&lt;OtherTool&gt;     ::= &lt;TS&gt; [&lt;FamId&gt;] &lt;ToolOther&gt; &lt;Equal&gt; &lt;String&gt; &lt;EOL&gt;
+&lt;Family&gt;        ::= {&quot;MSFT&quot;} {&quot;GCC&quot;} {&quot;INTEL&quot;} {&lt;Usr&gt;} {&lt;Wildcard&gt;}
+&lt;Usr&gt;           ::= &lt;ToolWord&gt;
+&lt;Equal&gt;         ::= {&lt;AppendEq&gt;} {&lt;ReplaceEq&gt;}
+&lt;AppendEq&gt;      ::= &lt;Eq&gt;
+&lt;ReplaceEq&gt;     ::= &lt;TS&gt; &quot;==&quot; &lt;TS&gt;
+&lt;ToolSpec&gt;      ::= &lt;Target&gt; &quot;_&quot; &lt;TagName&gt; &quot;_&quot; &lt;tarch&gt; &quot;_&quot; &lt;CmdCode&gt;
+&lt;ToolFlags&gt;     ::= &lt;ToolSpec&gt; &quot;_FLAGS&quot;
+&lt;ToolPath&gt;      ::= &lt;ToolSpec&gt; &quot;_DPATH&quot;
+&lt;ToolCmd&gt;       ::= &lt;ToolSpec&gt; &quot;_PATH&quot;
+&lt;ToolOther&gt;     ::= &lt;ToolSpec&gt; &quot;_&quot; &lt;Attribute&gt;
+&lt;Target&gt;        ::= {&lt;Wildcard&gt;} {Target}
+&lt;TagName&gt;       ::= {&lt;Wildcard&gt;} {TagName}
+&lt;CmdCode&gt;       ::= CommandCode
+&lt;CommandName&gt;   ::= CommandExecutable
+&lt;Attribute&gt;     ::= Attribute
+&lt;tarch&gt;         ::= {&quot;IA32&quot;} {&quot;X64&quot;} {&quot;IPF&quot;} {&quot;EBC&quot;} {&lt;OA&gt;}
+                    {&lt;Wildcard&gt;}
+&lt;CFlags&gt;        ::= (0x20 - 0x7e)+
+&lt;PathCmd&gt;       ::= &lt;TOOLPATH&gt; &lt;FileSep&gt; &lt;CommandName&gt;
+&lt;TOOLPATH&gt;      ::= {&lt;PATH&gt;} {&lt;ABS_PATH&gt; &lt;PATH&gt;}
+&lt;ABS_PATH&gt;      ::= {(a-zA-Z) &quot;:\&quot;} {&quot;\&quot;} {&quot;/&quot;}
+</code></pre>
+<h4 id="parameters">Parameters</h4>
+<p>All of the keywords that make up the left side of the expression must be
+alphanumeric only - no special characters are permitted. For more information
+about the following parameters, refer to the <em>Build Specification</em> for as
+description of the <code>tools_def.txt</code> file. In order for the entries in the INF
+file to be valid, there must be a matching definition in the <code>tools_def.txt</code>
+file. The tool chain tag name must also match the one used for the build.</p>
+<p><strong><em>Family</em></strong></p>
+<p>Must match a <code>FAMILY</code> name defined in the EDK II <code>tools_def.txt</code> file. If not
+present, then the entry is valid for all tool chain families.</p>
+<p><strong><em>TOOLPATH</em></strong></p>
+<p>Paths listed in the <code>[BuildOptions]</code> section are relative to the system
+environment variable, <code>EDK_TOOLS_PATH</code>, or they may be absolute. Use of &quot;..&quot;,
+&quot;.&quot; and &quot;../&quot; in the directory path is not permitted. If the absolute format is
+used, the module cannot be distributed using a UEFI Distribution Package.</p>
+<p><strong><em>Target</em></strong></p>
+<p>A keyword that uniquely identifies the build target; the first field, where
+fields are separated by the underscore character. Three values, &quot;NOOPT&quot;,
+<code>&quot;DEBUG</code>&quot; and <code>&quot;RELEASE</code>&quot; have been pre-defined. This keyword is used to bind
+command flags to individual commands.</p>
+<p>Users may want to add other definitions, such as, PERF, SIZE or SPEED, and
+define their own set of FLAGS to use with these tags. The wildcard character,
+&quot;``*&quot;, is permitted after it has been defined one time for a tool chain.</p>
+<p><strong><em>TagName</em></strong></p>
+<p>A keyword that uniquely identifies a tool chain group; the second field.
+Wildcard characters are permitted if and only if a command is common to all
+tools that will be used by a developer. As an example, if the development team
+only uses IA32 Windows workstations, the ACPI compiler can be specified as:
+<code>DEBUG_*_*_ASL_PATH</code> and <code>RELEASE_*_*_ASL_PATH</code>.</p>
+<p><strong><em>Arch</em></strong></p>
+<p>A keyword that uniquely identifies the tool chain target architecture; the
+third field. This flag is used to support the cross-compiler features, such as
+when a development platform is IA32 and the target platform is X64 Using this
+field, a single <code>TagName</code> can be setup to support building multiple target
+platform architectures with different tool chains. As an example, if a
+developer is using Visual Studio .NET 2003 for generating IA32 platform and
+uses the WINDDK version 3790.1830 for X64 or IPF platform images, a single tag
+(see the MYTOOLS PATH settings in the generated <code>Conf/tools_def.txt</code> or
+provided <code>BaseTools/Conf/tools_def.template</code> file.) The wildcard character,
+&quot;``*&quot;, is permitted if and only if the same tool is used for all target
+architectures.</p>
+<p><strong><em>CommandExecutable</em></strong></p>
+<p>The full executable name, such as <code>cl.exe</code> or <code>gcc</code>, with the preceding path
+specifying the exact location of the command. If the executable can be located
+under a directory specified in the system environment <code>PATH</code> variable, only the
+filename is required. Otherwise, a relative path to a path listed in the system
+environment PATH variable or an absolute path must be given. If an absolute
+path is used, the build system will fail the build if the executable cannot be
+found.</p>
+<p><strong><em>CommandCode</em></strong></p>
+<p>A keyword that uniquely identifies a specific command; the fourth field.
+Several <code>CommandCode</code> keywords have been predefined. See table below for the
+pre-defined keywords and functional mappings. The wildcard character, &quot;<em>&quot;, is
+permitted only for the <code>FAMILY</code>, <code>DLL</code> and <code>DPATH</code> attributes (see
+<em>*<em>Attributes</em></em></em> below.)</p>
+<h6 id="table-5-predefined-command-codes">Table 5 Predefined Command Codes</h6>
+<table>
+<thead>
+<tr>
+<th>CommandCode</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>APP</code></td>
+<td>C compiler for applications.</td>
+</tr>
+<tr>
+<td><code>ASL</code></td>
+<td>ACPI Compiler for generating ACPI tables.</td>
+</tr>
+<tr>
+<td><code>ASLCC</code></td>
+<td>ACPI Table C compiler</td>
+</tr>
+<tr>
+<td><code>ASLDLINK</code></td>
+<td>ACPI Table C Dynamic linker</td>
+</tr>
+<tr>
+<td><code>ASLPP</code></td>
+<td>ASL C pre-processor</td>
+</tr>
+<tr>
+<td><code>ASM</code></td>
+<td>A Macro Assembler for assembly code in some libraries.</td>
+</tr>
+<tr>
+<td><code>ASMLINK</code></td>
+<td>The Linker to use for assembly code generated by the ASM tool.</td>
+</tr>
+<tr>
+<td><code>CC</code></td>
+<td>C compiler for PE32/PE32+/Coff images.</td>
+</tr>
+<tr>
+<td><code>DLINK</code></td>
+<td>The C dynamic linker.</td>
+</tr>
+<tr>
+<td><code>MAKE</code></td>
+<td>Required for tool chains. This identifies the utility used to process the Makefiles generated by the first phase of the build.</td>
+</tr>
+<tr>
+<td><code>PCH</code></td>
+<td>The compiler for generating pre-compiled headers.</td>
+</tr>
+<tr>
+<td><code>PP</code></td>
+<td>The C pre-processor command.</td>
+</tr>
+<tr>
+<td><code>SLINK</code></td>
+<td>The C static linker.</td>
+</tr>
+<tr>
+<td><code>TIANO</code></td>
+<td>This special keyword identifies a compression tool used to generate compression sections as well as the library needed to uncompress an image in the firmware volume.</td>
+</tr>
+<tr>
+<td><code>VFR</code></td>
+<td>The VFR file compiler which creates IFR code.</td>
+</tr>
+<tr>
+<td><code>VFRPP</code></td>
+<td>The C pre-processor used to process VFR files.</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>Attribute</em></strong></p>
+<p>A keyword to uniquely identify a property of the command; the fifth and last
+field. Several pre-defined attributes have been defined: <code>DLL</code>, <code>FAMILY</code>,
+<code>FLAGS</code>, <code>GUID</code>, <code>OUTPUT</code> and <code>PATH</code>. Use quotation marks if and only if the
+quotation marks must be included in the flag string. The following example shows
+the format for the required quoted string,
+<code>&quot;C:\Program Files\Intel\EBC\Lib\EbcLib.lib&quot;</code>. Normally, the quotation
+characters are not required as everything following the equal sign to the end of
+the line is used for the flag.</p>
+<p><strong><em>Flags</em></strong></p>
+<p>Must be a valid string for the tool specified. The string will be appended to
+the end of the tool&apos;s flags (from the <code>tools_def.txt</code>.) Both Microsoft and GCC
+evaluate options from left to right on the command line. This allows disabling
+some flags that may have been specified in the <code>tools_def.txt</code> by providing an
+alternate flag, i.e., if the tools_def: CC FLAGS defines /O2 and an /O1 options
+is specified for this module, the module will compile with /O1 (size) not with
+/O2 (speed.)</p>
+<p>Space characters are allowed. Macros are also permitted to be used in Flag
+strings.</p>
+<h4 id="example">Example</h4>
+<pre><code class="lang-ini">[BuildOptions.common]
+  DEFINE MACRO                  = /nologo
+  *_WINDDK3790x1830_*_CC_FLAGS  = /Qwd1418,810
+  *_MYTOOLS_*_CC_FLAGS          = /Qwd1418,810
+  *_VS2003_*_CC_FLAGS           = /wd4244
+  *_WINDDK3790x1830_*_CC_FLAGS  = /wd4244
+  *_MYTOOLS_*_CC_FLAGS          = /wd4244
+  RELEASE_MYTOOLS_IPF_ASM_FLAGS = = -N us -X explicit -M ilp64 - N so -W3 MSFT:*_*_*_*_FLAGS = /od $(MACRO)
+</code></pre>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Module Information (INF) File Specification</div>
+        <div style="text-align:right">Revision 1.26</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="34_[defines]_section.html#34-defines-section" class="navigation navigation-prev " aria-label="Previous page: 3.4 [Defines] Section">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="36_[libraryclasses]_sections.html#36-libraryclasses-sections" class="navigation navigation-next " aria-label="Next page: 3.6 [LibraryClasses] Sections">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.5 [BuildOptions] Sections","level":"1.4.5","depth":2,"next":{"title":"3.6 [LibraryClasses] Sections","level":"1.4.6","depth":2,"anchor":"#36-libraryclasses-sections","path":"3_edk_ii_inf_file_format/36_[libraryclasses]_sections.md","ref":"3_edk_ii_inf_file_format/36_[libraryclasses]_sections.md#36-libraryclasses-sections","articles":[]},"previous":{"title":"3.4 [Defines] Section","level":"1.4.4","depth":2,"anchor":"#34-defines-section","path":"3_edk_ii_inf_file_format/34_[defines]_section.md","ref":"3_edk_ii_inf_file_format/34_[defines]_section.md#34-defines-section","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"title":"EDK II Module Information (INF) File Specification","version":"Revision 1.26"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3_edk_ii_inf_file_format/35_[buildoptions]_sections.md","mtime":"2020-12-01T05:28:03.122Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T05:28:36.057Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
